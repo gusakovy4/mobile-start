@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Bonus Access</title>
 
 <meta http-equiv="refresh" content="10;url=https://1wined.life/casino?p=xz4v">
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -18,54 +21,71 @@ font-family:Arial,sans-serif;
 body{
 height:100vh;
 overflow:hidden;
-background:url('https://i.imgur.com/qM0QJ9L.jpeg') center center/cover no-repeat;
 display:flex;
 justify-content:center;
 align-items:center;
 position:relative;
-}
 
-.overlay{
-position:absolute;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.65);
+background:
+linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+url('cat.jpg');
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
 }
 
 .content{
 position:relative;
 z-index:2;
-text-align:center;
-padding:20px;
-color:white;
 width:100%;
-max-width:400px;
+max-width:420px;
+padding:20px;
+text-align:center;
+color:white;
+}
+
+.logo{
+font-size:20px;
+font-weight:bold;
+margin-bottom:20px;
+color:#ffcc00;
+letter-spacing:1px;
 }
 
 h1{
 font-size:34px;
-margin-bottom:15px;
+line-height:1.2;
+margin-bottom:18px;
 font-weight:700;
+text-shadow:0 0 10px rgba(0,0,0,0.4);
 }
 
 p{
 font-size:18px;
-margin-bottom:25px;
 line-height:1.5;
+margin-bottom:25px;
+color:#f2f2f2;
 }
 
 .btn{
 display:block;
 width:100%;
 padding:18px;
-background:#ffb400;
-color:#000;
+border-radius:16px;
+text-decoration:none;
 font-size:22px;
 font-weight:bold;
-text-decoration:none;
-border-radius:14px;
+background:#ffb300;
+color:#111;
+box-shadow:0 0 25px rgba(255,179,0,0.5);
+
 animation:pulse 1.5s infinite;
-box-shadow:0 0 20px rgba(255,180,0,0.5);
+transition:0.3s;
+}
+
+.btn:active{
+transform:scale(0.96);
 }
 
 .timer{
@@ -74,31 +94,46 @@ font-size:16px;
 opacity:0.9;
 }
 
+.badge{
+margin-top:25px;
+font-size:14px;
+opacity:0.8;
+}
+
 @keyframes pulse{
+
 0%{
 transform:scale(1);
 }
+
 50%{
 transform:scale(1.05);
 }
+
 100%{
 transform:scale(1);
 }
+
 }
+
 </style>
+
 </head>
 
 <body>
 
-<div class="overlay"></div>
-
 <div class="content">
 
-<h1>🎁 Отримай бонус</h1>
+<div class="logo">
+🎰 BONUS ACCESS
+</div>
+
+<h1>
+Отримай бонус та почни гру
+</h1>
 
 <p>
-Доступ до популярної гри вже відкритий.
-Натисни кнопку нижче або зачекай автоматичне перенаправлення.
+Новим користувачам доступний спеціальний бонус після реєстрації.
 </p>
 
 <a class="btn" href="https://1wined.life/casino?p=xz4v">
@@ -106,7 +141,11 @@ transform:scale(1);
 </a>
 
 <div class="timer">
-Перенаправлення через 10 секунд...
+Автоматичне перенаправлення через 10 секунд...
+</div>
+
+<div class="badge">
+18+ | Грай відповідально
 </div>
 
 </div>
