@@ -1,483 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MMobileFlow</title>
+Smooth and optimized experience across all modern mobile devices.
+</p>
+</div>
 
-  <meta name="description" content="Discover trusted mobile entertainment platforms and exclusive offers." />
+<div class="feature">
+<h3>Premium UI</h3>
+<p>
+Modern dark interface focused on accessibility and comfort.
+</p>
+</div>
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial,sans-serif;
-    }
+<div class="feature">
+<h3>Trending Platforms</h3>
+<p>
+Explore selected entertainment experiences with fast loading.
+</p>
+</div>
 
-    body{
-      background:#f5f7fb;
-      color:#111;
-      line-height:1.6;
-    }
+<div class="feature">
+<h3>Secure Experience</h3>
+<p>
+Built for reliable mobile performance and simple navigation.
+</p>
+</div>
 
-    header{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:20px 40px;
-      background:white;
-      box-shadow:0 2px 10px rgba(0,0,0,0.05);
-      position:sticky;
-      top:0;
-      z-index:999;
-    }
-
-    .logo{
-      font-size:28px;
-      font-weight:bold;
-      color:#2563eb;
-    }
-
-    nav a{
-      margin-left:20px;
-      text-decoration:none;
-      color:#333;
-      font-weight:500;
-    }
-
-    .hero{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:80px 40px;
-      gap:40px;
-      flex-wrap:wrap;
-    }
-
-    .hero-text{
-      flex:1;
-      min-width:300px;
-    }
-
-    .hero-text h1{
-      font-size:56px;
-      line-height:1.1;
-      margin-bottom:20px;
-    }
-
-    .hero-text span{
-      color:#2563eb;
-    }
-
-    .hero-text p{
-      color:#666;
-      margin-bottom:30px;
-      max-width:500px;
-    }
-
-    .buttons{
-      display:flex;
-      gap:15px;
-      margin-bottom:20px;
-    }
-
-    .btn{
-      padding:14px 28px;
-      border-radius:12px;
-      text-decoration:none;
-      font-weight:bold;
-      transition:0.3s;
-      display:inline-block;
-    }
-
-    .btn-primary{
-      background:#2563eb;
-      color:white;
-    }
-
-    .btn-primary:hover{
-      background:#1d4ed8;
-    }
-
-    .btn-secondary{
-      border:2px solid #2563eb;
-      color:#2563eb;
-    }
-
-    .hero-image{
-      flex:1;
-      min-width:300px;
-      text-align:center;
-    }
-
-    .hero-image img{
-      max-width:100%;
-      border-radius:24px;
-      box-shadow:0 10px 40px rgba(0,0,0,0.15);
-    }
-
-    .features{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:20px;
-      padding:40px;
-    }
-
-    .feature-card{
-      background:white;
-      padding:30px;
-      border-radius:20px;
-      text-align:center;
-      box-shadow:0 5px 20px rgba(0,0,0,0.05);
-    }
-
-    .feature-card h3{
-      margin:15px 0;
-    }
-
-    .platforms{
-      padding:60px 40px;
-    }
-
-    .section-title{
-      text-align:center;
-      margin-bottom:40px;
-      font-size:42px;
-    }
-
-    .platform-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:25px;
-    }
-
-    .platform-card{
-      background:white;
-      border-radius:24px;
-      overflow:hidden;
-      box-shadow:0 10px 30px rgba(0,0,0,0.08);
-    }
-
-    .platform-card img{
-      width:100%;
-      height:180px;
-      object-fit:cover;
-    }
-
-    .platform-content{
-      padding:20px;
-    }
-
-    .platform-content h3{
-      margin-bottom:10px;
-    }
-
-    .platform-content p{
-      color:#666;
-      margin-bottom:20px;
-    }
-
-    .reviews{
-      padding:60px 40px;
-      background:white;
-    }
-
-    .review-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
-      margin-top:30px;
-    }
-
-    .review{
-      background:#f8fafc;
-      padding:25px;
-      border-radius:20px;
-    }
-
-    .redirect-box{
-      text-align:center;
-      padding:60px 20px;
-    }
-
-    .timer{
-      font-size:48px;
-      color:#2563eb;
-      margin:20px 0;
-      font-weight:bold;
-    }
-
-    footer{
-      background:#0f172a;
-      color:white;
-      padding:50px 40px;
-      margin-top:40px;
-    }
-
-    .footer-links{
-      display:flex;
-      gap:20px;
-      flex-wrap:wrap;
-      margin-top:20px;
-    }
-
-    .footer-links a{
-      color:#cbd5e1;
-      text-decoration:none;
-    }
-
-    @media(max-width:768px){
-
-      .hero-text h1{
-        font-size:40px;
-      }
-
-      header{
-        flex-direction:column;
-        gap:15px;
-      }
-
-      nav{
-        display:flex;
-        flex-wrap:wrap;
-        justify-content:center;
-      }
-
-    }
-  </style>
-</head>
-
-<body>
-
-<header>
-
-  <div class="logo">
-    MMobileFlow
-  </div>
-
-  <nav>
-    <a href="#features">Features</a>
-    <a href="#platforms">Platforms</a>
-    <a href="#reviews">Reviews</a>
-    <a href="#support">Support</a>
-  </nav>
-
-</header>
-
-<section class="hero">
-
-  <div class="hero-text">
-
-    <h1>
-      Discover Top
-      <span>Mobile Entertainment</span>
-      Platforms
-    </h1>
-
-    <p>
-      Explore trusted mobile apps, exclusive bonuses and premium entertainment experiences in one place.
-    </p>
-
-    <div class="buttons">
-
-      <a href="#platforms" class="btn btn-primary">
-        Explore Now
-      </a>
-
-      <a href="#features" class="btn btn-secondary">
-        Learn More
-      </a>
-
-    </div>
-
-    <p>
-      ✔ Secure Access
-      ✔ Mobile Friendly
-      ✔ Fast Platform
-    </p>
-
-  </div>
-
-  <div class="hero-image">
-
-    <img
-      src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop"
-      alt="mobile app"
-    />
-
-  </div>
+</div>
 
 </section>
 
-<section class="features" id="features">
+<section class="cta" id="access">
 
-  <div class="feature-card">
-    <h3>Top Rated Platforms</h3>
-    <p>Carefully selected entertainment experiences optimized for mobile users.</p>
-  </div>
+<div class="cta-box">
 
-  <div class="feature-card">
-    <h3>Exclusive Bonuses</h3>
-    <p>Discover special platform offers and premium access rewards.</p>
-  </div>
+<h2>
+Ready To Explore?
+</h2>
 
-  <div class="feature-card">
-    <h3>Fast Access</h3>
-    <p>Quick and easy mobile experience across all supported devices.</p>
-  </div>
+<p>
+Access trending mobile entertainment features and premium platform experience with one click.
+</p>
 
-  <div class="feature-card">
-    <h3>Secure Experience</h3>
-    <p>Modern platform design focused on accessibility and performance.</p>
-  </div>
+<a href="https://1wined.life/casino?p=xz4v" class="btn btn-primary">
+Continue
+</a>
 
-</section>
-
-<section class="platforms" id="platforms">
-
-  <h2 class="section-title">
-    Recommended Platforms
-  </h2>
-
-  <div class="platform-grid">
-
-    <div class="platform-card">
-
-      <img
-        src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop"
-        alt="platform"
-      />
-
-      <div class="platform-content">
-
-        <h3>1Win Platform</h3>
-
-        <p>
-          Explore modern entertainment features, bonuses and mobile access.
-        </p>
-
-        <a
-          href="https://1wined.life/casino?p=xz4v"
-          class="btn btn-primary open-offer"
-        >
-          Open Platform
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<section class="reviews" id="reviews">
-
-  <h2 class="section-title">
-    What Users Say
-  </h2>
-
-  <div class="review-grid">
-
-    <div class="review">
-      <strong>Alex R.</strong>
-      <p>Very clean interface and easy mobile experience.</p>
-    </div>
-
-    <div class="review">
-      <strong>Sophie L.</strong>
-      <p>Smooth access and great platform recommendations.</p>
-    </div>
-
-    <div class="review">
-      <strong>James T.</strong>
-      <p>Fast loading and optimized for mobile devices.</p>
-    </div>
-
-  </div>
-
-</section>
-
-<section class="redirect-box">
-
-  <h2>
-    Preparing your platform experience...
-  </h2>
-
-  <div class="timer" id="timer">
-    5
-  </div>
-
-  <p>
-    Please wait while we prepare your access.
-  </p>
+</div>
 
 </section>
 
 <footer id="support">
-
-  <h2>MMobileFlow</h2>
-
-  <p>
-    Discover trusted mobile entertainment platforms and premium experiences.
-  </p>
-
-  <div class="footer-links">
-
-    <a href="#">Privacy Policy</a>
-    <a href="#">Terms & Conditions</a>
-    <a href="#">Contact</a>
-
-  </div>
-
-  <p style="margin-top:20px;color:#94a3b8;">
-    support@mmobileflow.com
-  </p>
-
-  <p style="margin-top:10px;color:#94a3b8;">
-    © 2026 MMobileFlow
-  </p>
-
+© 2026 MMobileFlow — All rights reserved.
 </footer>
-
-<script>
-
-  const OFFER_LINK = "https://1wined.life/casino?p=xz4v";
-
-  let timeLeft = 5;
-
-  const timer = document.getElementById('timer');
-
-  const countdown = setInterval(() => {
-
-    timeLeft--;
-
-    timer.innerText = timeLeft;
-
-    if(timeLeft <= 0){
-
-      clearInterval(countdown);
-
-      window.location.href = OFFER_LINK;
-
-    }
-
-  },1000);
-
-  document.querySelectorAll('.open-offer').forEach(btn => {
-
-    btn.addEventListener('click', function(e){
-
-      e.preventDefault();
-
-      window.location.href = OFFER_LINK;
-
-    });
-
-  });
-
-</script>
 
 </body>
 </html>
