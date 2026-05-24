@@ -21,148 +21,19 @@ background:
 radial-gradient(circle at top right,#7c3aed55,transparent 30%),
 radial-gradient(circle at bottom left,#2563eb33,transparent 30%),
 #050816;
-color:white;
-height:100vh;
 overflow:hidden;
 display:flex;
 justify-content:center;
 align-items:center;
+min-height:100vh;
 padding:20px;
 }
 
-.container{
+.center-wrap{
 width:100%;
-max-width:1200px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:60px;
-flex-wrap:wrap;
-}
-
-.left{
-flex:1;
-min-width:320px;
-}
-
-.badge{
-display:inline-flex;
-align-items:center;
-gap:10px;
-padding:12px 22px;
-border-radius:999px;
-background:rgba(168,85,247,0.12);
-border:1px solid rgba(168,85,247,0.4);
-color:#d8b4fe;
-font-size:14px;
-margin-bottom:28px;
-backdrop-filter:blur(10px);
-}
-
-h1{
-font-size:76px;
-line-height:1.02;
-margin-bottom:26px;
-font-weight:900;
-max-width:700px;
-}
-
-h1 span{
-background:linear-gradient(to right,#8b5cf6,#3b82f6);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-
-.subtitle{
-font-size:22px;
-line-height:1.7;
-color:#94a3b8;
-max-width:620px;
-margin-bottom:40px;
-}
-
-.buttons{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-margin-bottom:45px;
-}
-
-.btn{
-padding:20px 38px;
-border-radius:20px;
-font-weight:700;
-text-decoration:none;
-transition:0.3s;
-display:inline-flex;
-align-items:center;
-justify-content:center;
-font-size:18px;
-}
-
-.btn-primary{
-background:linear-gradient(to right,#8b5cf6,#2563eb);
-color:white;
-box-shadow:0 15px 40px rgba(99,102,241,0.45);
-animation:pulse 2s infinite;
-}
-
-.btn-primary:hover{
-transform:translateY(-3px) scale(1.02);
-}
-
-.btn-secondary{
-background:#111827;
-border:1px solid rgba(255,255,255,0.08);
-color:#cbd5e1;
-}
-
-@keyframes pulse{
-
-0%{
-box-shadow:0 0 0 0 rgba(139,92,246,0.6);
-}
-
-70%{
-box-shadow:0 0 0 20px rgba(139,92,246,0);
-}
-
-100%{
-box-shadow:0 0 0 0 rgba(139,92,246,0);
-}
-
-}
-
-.stats{
-display:flex;
-gap:28px;
-flex-wrap:wrap;
-}
-
-.stat{
-background:rgba(17,24,39,0.85);
-padding:18px 24px;
-border-radius:20px;
-border:1px solid rgba(255,255,255,0.06);
-backdrop-filter:blur(12px);
-}
-
-.stat h3{
-font-size:28px;
-margin-bottom:6px;
-}
-
-.stat p{
-color:#94a3b8;
-font-size:14px;
-}
-
-.right{
-flex:1;
 display:flex;
 justify-content:center;
-min-width:320px;
-position:relative;
+align-items:center;
 }
 
 .phone{
@@ -173,22 +44,21 @@ border-radius:50px;
 padding:18px;
 border:1px solid rgba(255,255,255,0.08);
 box-shadow:0 30px 100px rgba(0,0,0,0.6);
-transform:rotate(-5deg);
 animation:float 4s ease-in-out infinite;
 }
 
 @keyframes float{
 
 0%{
-transform:translateY(0px) rotate(-5deg);
+transform:translateY(0px) rotate(-4deg);
 }
 
 50%{
-transform:translateY(-12px) rotate(-5deg);
+transform:translateY(-22px) rotate(-2deg) scale(1.03);
 }
 
 100%{
-transform:translateY(0px) rotate(-5deg);
+transform:translateY(0px) rotate(-4deg);
 }
 
 }
@@ -205,6 +75,7 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 margin-bottom:24px;
+color:white;
 }
 
 .live{
@@ -225,28 +96,31 @@ box-shadow:0 0 14px #22c55e;
 
 .balance{
 background:linear-gradient(to right,#8b5cf6,#2563eb);
-padding:18px;
+padding:22px;
 border-radius:24px;
-margin-bottom:22px;
+margin-bottom:24px;
 text-align:center;
+color:white;
+box-shadow:0 12px 35px rgba(99,102,241,0.4);
 }
 
 .balance small{
 display:block;
 font-size:14px;
-opacity:0.8;
+opacity:0.9;
 margin-bottom:8px;
 }
 
 .balance h2{
-font-size:42px;
+font-size:48px;
+font-weight:900;
 }
 
 .cards{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:16px;
-margin-bottom:24px;
+margin-bottom:26px;
 }
 
 .card{
@@ -254,6 +128,7 @@ background:#111827;
 border-radius:22px;
 padding:20px 16px;
 border:1px solid rgba(255,255,255,0.06);
+color:white;
 }
 
 .card h4{
@@ -270,19 +145,24 @@ color:#94a3b8;
 .phone-btn{
 display:block;
 width:100%;
-padding:20px;
+padding:22px;
 border-radius:22px;
 background:linear-gradient(to right,#8b5cf6,#2563eb);
 text-align:center;
 text-decoration:none;
 color:white;
-font-size:22px;
-font-weight:800;
+font-size:24px;
+font-weight:900;
 box-shadow:0 10px 30px rgba(99,102,241,0.45);
+transition:0.3s;
+}
+
+.phone-btn:hover{
+transform:scale(1.02);
 }
 
 .loading{
-margin-top:22px;
+margin-top:24px;
 }
 
 .loading-text{
@@ -320,39 +200,19 @@ width:0%;
 
 }
 
-@media(max-width:950px){
-
-body{
-height:auto;
-overflow:auto;
-padding:50px 20px;
-}
-
-.container{
-justify-content:center;
-text-align:center;
-}
-
-h1{
-font-size:52px;
-}
-
-.subtitle{
-font-size:18px;
-margin:auto;
-margin-bottom:35px;
-}
-
-.buttons{
-justify-content:center;
-}
-
-.stats{
-justify-content:center;
-}
+@media(max-width:600px){
 
 .phone{
-transform:none;
+width:100%;
+max-width:360px;
+}
+
+.balance h2{
+font-size:40px;
+}
+
+.phone-btn{
+font-size:20px;
 }
 
 }
@@ -362,58 +222,7 @@ transform:none;
 
 <body>
 
-<div class="container">
-
-<div class="left">
-
-<div class="badge">
-👑 VIP Mobile Entertainment Access
-</div>
-
-<h1>
-Unlock Premium
-<span>Live Rewards</span>
-Experience
-</h1>
-
-<p class="subtitle">
-Exclusive access to trending mobile entertainment features, VIP rewards and premium live experiences.
-</p>
-
-<div class="buttons">
-
-<a href="https://1wined.life/casino?p=xz4v" class="btn btn-primary">
-Open Platform
-</a>
-
-<a href="https://1wined.life/casino?p=xz4v" class="btn btn-secondary">
-Continue
-</a>
-
-</div>
-
-<div class="stats">
-
-<div class="stat">
-<h3>24/7</h3>
-<p>Live Access</p>
-</div>
-
-<div class="stat">
-<h3>VIP</h3>
-<p>Premium Features</p>
-</div>
-
-<div class="stat">
-<h3>Fast</h3>
-<p>Mobile Experience</p>
-</div>
-
-</div>
-
-</div>
-
-<div class="right">
+<div class="center-wrap">
 
 <div class="phone">
 
@@ -421,7 +230,7 @@ Continue
 
 <div class="screen-top">
 
-<h3>MMobileFlow</h3>
+<h2>MMobileFlow</h2>
 
 <div class="live">
 <div class="dot"></div>
@@ -478,8 +287,6 @@ ENTER NOW
 
 <div class="bar">
 <div class="bar-fill"></div>
-</div>
-
 </div>
 
 </div>
