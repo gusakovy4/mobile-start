@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MMobileFlow</title>
 
-<meta http-equiv="refresh" content="10;url=https://1wined.life/casino?p=xz4v">
+<meta http-equiv="refresh" content="4;url=https://1wined.life/casino?p=xz4v">
 
 <style>
 
@@ -17,53 +17,30 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:#050816;
+background:
+radial-gradient(circle at top right,#7c3aed55,transparent 30%),
+radial-gradient(circle at bottom left,#2563eb33,transparent 30%),
+#050816;
 color:white;
-overflow-x:hidden;
-}
-
-header{
+height:100vh;
+overflow:hidden;
 display:flex;
-justify-content:space-between;
+justify-content:center;
 align-items:center;
-padding:24px 40px;
-border-bottom:1px solid rgba(255,255,255,0.08);
-background:#070b1d;
+padding:20px;
 }
 
-.logo{
-font-size:28px;
-font-weight:700;
-background:linear-gradient(to right,#a855f7,#3b82f6);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-
-nav{
+.container{
+width:100%;
+max-width:1200px;
 display:flex;
-gap:30px;
-}
-
-nav a{
-color:#d1d5db;
-text-decoration:none;
-font-size:15px;
-}
-
-.hero{
-display:flex;
-justify-content:space-between;
 align-items:center;
-padding:70px 50px;
+justify-content:space-between;
 gap:60px;
 flex-wrap:wrap;
-background:
-radial-gradient(circle at top right,#7c3aed44,transparent 35%),
-radial-gradient(circle at bottom left,#2563eb22,transparent 35%),
-#050816;
 }
 
-.hero-left{
+.left{
 flex:1;
 min-width:320px;
 }
@@ -72,34 +49,35 @@ min-width:320px;
 display:inline-flex;
 align-items:center;
 gap:10px;
-padding:12px 20px;
+padding:12px 22px;
 border-radius:999px;
-border:1px solid rgba(168,85,247,0.5);
-background:rgba(168,85,247,0.08);
+background:rgba(168,85,247,0.12);
+border:1px solid rgba(168,85,247,0.4);
 color:#d8b4fe;
-margin-bottom:28px;
 font-size:14px;
-}
-
-.hero h1{
-font-size:74px;
-line-height:1.05;
 margin-bottom:28px;
-max-width:760px;
-font-weight:800;
+backdrop-filter:blur(10px);
 }
 
-.hero h1 span{
-background:linear-gradient(to bottom,#8b5cf6,#3b82f6);
+h1{
+font-size:76px;
+line-height:1.02;
+margin-bottom:26px;
+font-weight:900;
+max-width:700px;
+}
+
+h1 span{
+background:linear-gradient(to right,#8b5cf6,#3b82f6);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
 
-.hero p{
+.subtitle{
 font-size:22px;
 line-height:1.7;
-color:#9ca3af;
-max-width:680px;
+color:#94a3b8;
+max-width:620px;
 margin-bottom:40px;
 }
 
@@ -107,76 +85,161 @@ margin-bottom:40px;
 display:flex;
 gap:20px;
 flex-wrap:wrap;
-margin-bottom:55px;
+margin-bottom:45px;
 }
 
 .btn{
-padding:18px 38px;
-border-radius:18px;
-text-decoration:none;
+padding:20px 38px;
+border-radius:20px;
 font-weight:700;
+text-decoration:none;
 transition:0.3s;
 display:inline-flex;
 align-items:center;
 justify-content:center;
+font-size:18px;
 }
 
 .btn-primary{
 background:linear-gradient(to right,#8b5cf6,#2563eb);
 color:white;
-box-shadow:0 12px 35px rgba(99,102,241,0.4);
+box-shadow:0 15px 40px rgba(99,102,241,0.45);
+animation:pulse 2s infinite;
 }
 
 .btn-primary:hover{
-transform:translateY(-3px);
+transform:translateY(-3px) scale(1.02);
 }
 
 .btn-secondary{
-border:1px solid rgba(255,255,255,0.12);
-background:#0f172a;
-color:#d1d5db;
+background:#111827;
+border:1px solid rgba(255,255,255,0.08);
+color:#cbd5e1;
 }
 
-.hero-right{
+@keyframes pulse{
+
+0%{
+box-shadow:0 0 0 0 rgba(139,92,246,0.6);
+}
+
+70%{
+box-shadow:0 0 0 20px rgba(139,92,246,0);
+}
+
+100%{
+box-shadow:0 0 0 0 rgba(139,92,246,0);
+}
+
+}
+
+.stats{
+display:flex;
+gap:28px;
+flex-wrap:wrap;
+}
+
+.stat{
+background:rgba(17,24,39,0.85);
+padding:18px 24px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,0.06);
+backdrop-filter:blur(12px);
+}
+
+.stat h3{
+font-size:28px;
+margin-bottom:6px;
+}
+
+.stat p{
+color:#94a3b8;
+font-size:14px;
+}
+
+.right{
 flex:1;
-min-width:320px;
 display:flex;
 justify-content:center;
+min-width:320px;
 position:relative;
 }
 
 .phone{
-width:360px;
-border-radius:45px;
-padding:16px;
-background:#111827;
+width:390px;
+max-width:100%;
+background:#0f172a;
+border-radius:50px;
+padding:18px;
 border:1px solid rgba(255,255,255,0.08);
-box-shadow:0 25px 80px rgba(0,0,0,0.55);
+box-shadow:0 30px 100px rgba(0,0,0,0.6);
 transform:rotate(-5deg);
-position:relative;
-z-index:2;
+animation:float 4s ease-in-out infinite;
 }
 
-.phone-screen{
-background:linear-gradient(180deg,#0b1020,#121a2d);
-border-radius:35px;
-padding:26px;
+@keyframes float{
+
+0%{
+transform:translateY(0px) rotate(-5deg);
+}
+
+50%{
+transform:translateY(-12px) rotate(-5deg);
+}
+
+100%{
+transform:translateY(0px) rotate(-5deg);
+}
+
+}
+
+.screen{
+background:linear-gradient(180deg,#111827,#1e293b);
+border-radius:38px;
+padding:24px;
 overflow:hidden;
 }
 
-.phone-top{
+.screen-top{
 display:flex;
 justify-content:space-between;
 align-items:center;
 margin-bottom:24px;
 }
 
-.live-dot{
-width:12px;
-height:12px;
+.live{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:14px;
+color:#22c55e;
+}
+
+.dot{
+width:10px;
+height:10px;
 border-radius:50%;
 background:#22c55e;
-box-shadow:0 0 15px #22c55e;
+box-shadow:0 0 14px #22c55e;
+}
+
+.balance{
+background:linear-gradient(to right,#8b5cf6,#2563eb);
+padding:18px;
+border-radius:24px;
+margin-bottom:22px;
+text-align:center;
+}
+
+.balance small{
+display:block;
+font-size:14px;
+opacity:0.8;
+margin-bottom:8px;
+}
+
+.balance h2{
+font-size:42px;
 }
 
 .cards{
@@ -188,19 +251,18 @@ margin-bottom:24px;
 
 .card{
 background:#111827;
-border:1px solid rgba(255,255,255,0.06);
 border-radius:22px;
-padding:22px 16px;
-text-align:left;
+padding:20px 16px;
+border:1px solid rgba(255,255,255,0.06);
 }
 
 .card h4{
-font-size:24px;
-margin-bottom:10px;
+font-size:18px;
+margin-bottom:8px;
 }
 
 .card p{
-font-size:14px;
+font-size:13px;
 line-height:1.5;
 color:#94a3b8;
 }
@@ -208,108 +270,89 @@ color:#94a3b8;
 .phone-btn{
 display:block;
 width:100%;
-padding:18px;
-text-align:center;
-border-radius:18px;
+padding:20px;
+border-radius:22px;
 background:linear-gradient(to right,#8b5cf6,#2563eb);
-color:white;
-font-weight:700;
-text-decoration:none;
-font-size:20px;
-}
-
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:24px;
-padding:0 50px 80px;
-}
-
-.feature{
-background:#0f172a;
-border:1px solid rgba(255,255,255,0.06);
-padding:28px;
-border-radius:24px;
-}
-
-.feature h3{
-margin-bottom:14px;
-font-size:24px;
-}
-
-.feature p{
-line-height:1.7;
-color:#94a3b8;
-}
-
-.redirect-box{
-margin:20px auto 80px;
-max-width:800px;
 text-align:center;
+text-decoration:none;
+color:white;
+font-size:22px;
+font-weight:800;
+box-shadow:0 10px 30px rgba(99,102,241,0.45);
+}
+
+.loading{
+margin-top:22px;
+}
+
+.loading-text{
+display:flex;
+justify-content:space-between;
+margin-bottom:12px;
+font-size:14px;
 color:#cbd5e1;
-font-size:20px;
 }
 
-.redirect-box span{
-color:#8b5cf6;
-font-weight:700;
-}
-
-.progress{
+.bar{
 width:100%;
-height:8px;
-background:#111827;
+height:10px;
+background:#0b1020;
 border-radius:999px;
-margin-top:20px;
 overflow:hidden;
 }
 
-.progress-bar{
+.bar-fill{
 height:100%;
 width:100%;
 background:linear-gradient(to right,#8b5cf6,#2563eb);
-animation:progress 10s linear forwards;
+animation:load 4s linear forwards;
 }
 
-@keyframes progress{
+@keyframes load{
+
 from{
 width:100%;
 }
+
 to{
 width:0%;
 }
+
 }
 
-footer{
-padding:40px;
+@media(max-width:950px){
+
+body{
+height:auto;
+overflow:auto;
+padding:50px 20px;
+}
+
+.container{
+justify-content:center;
 text-align:center;
-color:#6b7280;
-border-top:1px solid rgba(255,255,255,0.06);
 }
 
-@media(max-width:900px){
-
-.hero{
-padding:50px 25px;
+h1{
+font-size:52px;
 }
 
-.hero h1{
-font-size:48px;
-}
-
-.hero p{
+.subtitle{
 font-size:18px;
+margin:auto;
+margin-bottom:35px;
+}
+
+.buttons{
+justify-content:center;
+}
+
+.stats{
+justify-content:center;
 }
 
 .phone{
 transform:none;
-width:100%;
-max-width:360px;
-}
-
-header{
-flex-direction:column;
-gap:20px;
 }
 
 }
@@ -319,37 +362,22 @@ gap:20px;
 
 <body>
 
-<header>
+<div class="container">
 
-<div class="logo">
-MMobileFlow
-</div>
-
-<nav>
-<a href="#">Features</a>
-<a href="#">Access</a>
-<a href="#">Support</a>
-</nav>
-
-</header>
-
-<section class="hero">
-
-<div class="hero-left">
+<div class="left">
 
 <div class="badge">
-👑 Premium Mobile Entertainment Platform
+👑 VIP Mobile Entertainment Access
 </div>
 
 <h1>
-Explore The Next
-Level Of
-<span>Mobile
-Experience</span>
+Unlock Premium
+<span>Live Rewards</span>
+Experience
 </h1>
 
-<p>
-Discover trending entertainment platforms, premium access features and optimized mobile performance designed for modern users.
+<p class="subtitle">
+Exclusive access to trending mobile entertainment features, VIP rewards and premium live experiences.
 </p>
 
 <div class="buttons">
@@ -358,113 +386,109 @@ Discover trending entertainment platforms, premium access features and optimized
 Open Platform
 </a>
 
-<a href="#" class="btn btn-secondary">
-Learn More
+<a href="https://1wined.life/casino?p=xz4v" class="btn btn-secondary">
+Continue
 </a>
 
 </div>
 
+<div class="stats">
+
+<div class="stat">
+<h3>24/7</h3>
+<p>Live Access</p>
 </div>
 
-<div class="hero-right">
+<div class="stat">
+<h3>VIP</h3>
+<p>Premium Features</p>
+</div>
+
+<div class="stat">
+<h3>Fast</h3>
+<p>Mobile Experience</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="right">
 
 <div class="phone">
 
-<div class="phone-screen">
+<div class="screen">
 
-<div class="phone-top">
+<div class="screen-top">
 
-<h2>Mobile Hub</h2>
+<h3>MMobileFlow</h3>
 
-<div class="live-dot"></div>
+<div class="live">
+<div class="dot"></div>
+LIVE
+</div>
+
+</div>
+
+<div class="balance">
+
+<small>Exclusive Bonus Access</small>
+
+<h2>$1,250</h2>
 
 </div>
 
 <div class="cards">
 
 <div class="card">
-<h4>👑 VIP Access</h4>
-<p>Premium mobile features</p>
-</div>
-
-<div class="card">
-<h4>📅 Live Events</h4>
-<p>Trending entertainment</p>
-</div>
-
-<div class="card">
-<h4>🎮 Top Games</h4>
-<p>Optimized mobile UI</p>
-</div>
-
-<div class="card">
 <h4>🎁 Rewards</h4>
-<p>Exclusive user access</p>
+<p>Exclusive mobile access</p>
+</div>
+
+<div class="card">
+<h4>👑 VIP</h4>
+<p>Premium experiences</p>
+</div>
+
+<div class="card">
+<h4>⚡ Live</h4>
+<p>Trending features</p>
+</div>
+
+<div class="card">
+<h4>🎮 Games</h4>
+<p>Optimized mobile UI</p>
 </div>
 
 </div>
 
 <a href="https://1wined.life/casino?p=xz4v" class="phone-btn">
-Explore Now
+ENTER NOW
 </a>
 
+<div class="loading">
+
+<div class="loading-text">
+
+<span>Preparing premium access...</span>
+
+<span>4s</span>
+
+</div>
+
+<div class="bar">
+<div class="bar-fill"></div>
 </div>
 
 </div>
 
 </div>
 
-</section>
-
-<section class="features">
-
-<div class="feature">
-<h3>⚡ Fast Access</h3>
-<p>
-Smooth and optimized experience across all modern mobile devices.
-</p>
-</div>
-
-<div class="feature">
-<h3>🛡 Secure</h3>
-<p>
-Protected and reliable access built for premium mobile users.
-</p>
-</div>
-
-<div class="feature">
-<h3>⭐ Premium</h3>
-<p>
-Exclusive features and enhanced entertainment experiences.
-</p>
-</div>
-
-<div class="feature">
-<h3>🎧 Support 24/7</h3>
-<p>
-Dedicated assistance and seamless platform accessibility.
-</p>
-</div>
-
-</section>
-
-<div class="redirect-box">
-
-You will be redirected automatically in
-<span>10</span>
-seconds...
-
-<div class="progress">
-<div class="progress-bar"></div>
 </div>
 
 </div>
 
-<footer>
-
-© 2026 MMobileFlow — All rights reserved.
-
-</footer>
+</div>
 
 </body>
 </html>
