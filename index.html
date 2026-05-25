@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,7 +35,7 @@ align-items:center;
 }
 
 .phone{
-width:390px;
+width:410px;
 max-width:100%;
 background:#0f172a;
 border-radius:50px;
@@ -52,7 +52,7 @@ transform:translateY(0px) rotate(-4deg);
 }
 
 50%{
-transform:translateY(-22px) rotate(-2deg) scale(1.03);
+transform:translateY(-20px) rotate(-2deg) scale(1.03);
 }
 
 100%{
@@ -76,6 +76,14 @@ margin-bottom:24px;
 color:white;
 }
 
+.logo{
+font-size:30px;
+font-weight:900;
+background:linear-gradient(to right,#8b5cf6,#2563eb);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
 .live{
 display:flex;
 align-items:center;
@@ -90,6 +98,27 @@ height:10px;
 border-radius:50%;
 background:#22c55e;
 box-shadow:0 0 14px #22c55e;
+}
+
+.title{
+color:white;
+font-size:34px;
+font-weight:900;
+line-height:1.2;
+margin-bottom:18px;
+}
+
+.title span{
+background:linear-gradient(to right,#8b5cf6,#2563eb);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.subtitle{
+color:#94a3b8;
+font-size:16px;
+line-height:1.6;
+margin-bottom:24px;
 }
 
 .balance{
@@ -110,7 +139,7 @@ margin-bottom:8px;
 }
 
 .balance h2{
-font-size:48px;
+font-size:44px;
 font-weight:900;
 }
 
@@ -153,17 +182,50 @@ font-size:24px;
 font-weight:900;
 box-shadow:0 10px 30px rgba(99,102,241,0.45);
 transition:0.3s;
+margin-bottom:18px;
 }
 
 .phone-btn:hover{
 transform:scale(1.02);
 }
 
-.safe-note{
-margin-top:18px;
-text-align:center;
-font-size:13px;
-color:#94a3b8;
+.users{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:14px;
+background:#111827;
+padding:16px;
+border-radius:18px;
+border:1px solid rgba(255,255,255,0.06);
+}
+
+.avatars{
+display:flex;
+}
+
+.avatar{
+width:36px;
+height:36px;
+border-radius:50%;
+background:linear-gradient(to right,#8b5cf6,#2563eb);
+border:2px solid #0f172a;
+margin-left:-10px;
+}
+
+.avatar:first-child{
+margin-left:0;
+}
+
+.users-text{
+color:white;
+font-size:14px;
+line-height:1.4;
+}
+
+.users-text span{
+color:#22c55e;
+font-weight:700;
 }
 
 @media(max-width:600px){
@@ -173,8 +235,12 @@ width:100%;
 max-width:360px;
 }
 
+.title{
+font-size:28px;
+}
+
 .balance h2{
-font-size:40px;
+font-size:38px;
 }
 
 .phone-btn{
@@ -196,7 +262,9 @@ font-size:20px;
 
 <div class="screen-top">
 
-<h2>MMobileFlow</h2>
+<div class="logo">
+M
+</div>
 
 <div class="live">
 <div class="dot"></div>
@@ -205,44 +273,67 @@ LIVE
 
 </div>
 
+<div class="title">
+Відкрий <span>преміум</span><br>
+мобільний доступ
+</div>
+
+<div class="subtitle">
+Ексклюзивні можливості, live-події, бонуси та сучасний mobile entertainment experience.
+</div>
+
 <div class="balance">
 
-<small>Exclusive Bonus Access</small>
+<small>Бонус для нових користувачів</small>
 
-<h2>$1,250</h2>
+<h2>₴50 000</h2>
 
 </div>
 
 <div class="cards">
 
 <div class="card">
-<h4>🎁 Rewards</h4>
-<p>Exclusive mobile access</p>
+<h4>🎁 Бонуси</h4>
+<p>Спеціальні пропозиції та нагороди</p>
 </div>
 
 <div class="card">
-<h4>👑 VIP</h4>
-<p>Premium experiences</p>
+<h4>⚡ LIVE</h4>
+<p>Актуальні live-події та оновлення</p>
 </div>
 
 <div class="card">
-<h4>⚡ Live</h4>
-<p>Trending features</p>
+<h4>🎮 Ігри</h4>
+<p>Сучасний mobile experience</p>
 </div>
 
 <div class="card">
-<h4>🎮 Games</h4>
-<p>Optimized mobile UI</p>
+<h4>👑 Premium</h4>
+<p>Ексклюзивний доступ для учасників</p>
 </div>
 
 </div>
 
-<a href="https://1wined.life/casino?p=xz4v" class="phone-btn">
-ENTER NOW
+<a href="https://one-vv0157.com/casino?p=u31e" class="phone-btn">
+УВІЙТИ ЗАРАЗ
 </a>
 
-<div class="safe-note">
-Secure mobile entertainment access
+<div class="users">
+
+<div class="avatars">
+
+<div class="avatar"></div>
+<div class="avatar"></div>
+<div class="avatar"></div>
+<div class="avatar"></div>
+
+</div>
+
+<div class="users-text">
+<span>12 000+</span><br>
+активних користувачів
+</div>
+
 </div>
 
 </div>
