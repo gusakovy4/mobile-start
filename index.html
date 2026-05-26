@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 <title>VIP ACCESS</title>
 
@@ -17,52 +17,45 @@
 
 body{
     background:#000;
-    overflow:hidden;
+    overflow-x:hidden;
     color:#fff;
 }
 
-/* MAIN SCREEN */
-
-.screen{
+.phone{
     position:relative;
     width:100%;
     min-height:100vh;
-
-    display:flex;
-    justify-content:center;
+    overflow:hidden;
 
     background:
     radial-gradient(circle at top,
-    rgba(139,92,246,.35),
-    transparent 30%),
+    rgba(124,58,237,.35),
+    transparent 35%),
 
     linear-gradient(
     180deg,
-    #070b1d 0%,
-    #020617 45%,
+    #050816 0%,
+    #020617 40%,
     #000000 100%);
 }
 
-/* PHONE */
+.overlay{
+    position:relative;
+    z-index:2;
 
-.phone{
     width:100%;
     max-width:430px;
-    min-height:100vh;
 
-    padding:26px 18px 40px;
-
-    position:relative;
+    margin:auto;
+    padding:18px 18px 50px;
 }
 
-/* TOP */
-
 .live{
-    color:#34ff69;
+    color:#31ff63;
     font-size:18px;
     font-weight:700;
 
-    margin-bottom:28px;
+    margin-bottom:22px;
 }
 
 .live::before{
@@ -70,191 +63,165 @@ body{
     margin-right:8px;
 }
 
-/* TITLE */
-
 h1{
-    font-size:68px;
+    font-size:56px;
     line-height:.92;
     font-weight:900;
 
-    margin-bottom:24px;
+    margin-bottom:22px;
 }
 
 .subtitle{
-    font-size:18px;
+    font-size:17px;
     line-height:1.45;
+    color:#d7dbe7;
 
-    color:#d7dbea;
-
-    margin-bottom:36px;
+    margin-bottom:28px;
 }
-
-/* CIRCLE */
 
 .progress-wrap{
     display:flex;
     justify-content:center;
 
-    margin-bottom:36px;
+    margin-bottom:34px;
 }
 
 .circle{
-    width:230px;
-    height:230px;
-
+    width:180px;
+    height:180px;
     border-radius:50%;
 
     background:
     conic-gradient(
-    #4d7cff 0% 64%,
-    #9f5dff 64% 89%,
-    rgba(255,255,255,.08) 89% 100%);
+        #4b7cff 0% 63%,
+        #9d5cff 63% 89%,
+        rgba(255,255,255,.12) 89% 100%
+    );
 
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
 
     box-shadow:
-    0 0 40px rgba(92,92,255,.25);
+    0 0 40px rgba(76,92,255,.25);
 }
 
 .circle-inner{
-    width:158px;
-    height:158px;
+    width:122px;
+    height:122px;
 
     border-radius:50%;
 
-    background:#030d2f;
+    background:#020b2d;
 
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
 
-    font-size:64px;
+    font-size:52px;
     font-weight:900;
 }
 
-/* STATUS */
+.status-box{
+    padding:22px 22px;
 
-.status{
-    width:100%;
+    margin-bottom:16px;
 
-    padding:24px 22px;
+    border-radius:26px;
 
-    border-radius:28px;
+    background:rgba(12,12,25,.58);
 
-    margin-bottom:18px;
+    backdrop-filter:blur(18px);
 
-    background:rgba(18,18,30,.55);
-
-    border:1px solid rgba(255,255,255,.05);
-
-    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.04);
 
     display:flex;
     justify-content:space-between;
     align-items:center;
 
-    font-size:20px;
+    font-size:19px;
 }
 
 .done{
-    color:#31ff63;
+    color:#35ff5c;
     font-weight:700;
 }
 
 .loading{
-    color:#9f5dff;
+    color:#a855f7;
     font-weight:700;
 }
 
-/* BONUS */
-
 .bonus{
-    margin-top:26px;
+    margin-top:22px;
 
-    padding:30px 24px;
+    background:rgba(12,12,25,.58);
 
-    border-radius:34px;
+    border-radius:30px;
 
-    background:rgba(18,18,30,.58);
+    padding:28px 22px;
 
-    border:1px solid rgba(255,255,255,.05);
+    backdrop-filter:blur(18px);
 
-    backdrop-filter:blur(14px);
+    border:1px solid rgba(255,255,255,.04);
 }
 
 .bonus h2{
-    font-size:60px;
+    font-size:54px;
     line-height:.92;
     font-weight:900;
 
-    margin-bottom:20px;
+    margin-bottom:18px;
 }
 
 .bonus p{
     font-size:18px;
-    line-height:1.5;
+    line-height:1.45;
 
-    color:#d6d6df;
+    color:#d7dbe7;
 
     margin-bottom:28px;
 }
 
-/* BUTTON */
-
 .clarity-btn{
     width:100%;
-    height:78px;
+    height:74px;
 
     border:none;
     border-radius:28px;
 
-    cursor:pointer;
+    font-size:24px;
+    font-weight:800;
 
     color:#fff;
 
-    font-size:28px;
-    font-weight:900;
+    cursor:pointer;
 
     background:
     linear-gradient(
-    90deg,
-    #b14cff,
-    #4d7cff);
+        90deg,
+        #b44cff,
+        #4b7cff
+    );
 
     box-shadow:
-    0 0 40px rgba(93,92,255,.4);
+    0 0 30px rgba(76,92,255,.35);
 
     transition:.2s;
 }
 
 .clarity-btn:active{
-    transform:scale(.97);
+    transform:scale(.98);
 }
-
-/* MOBILE */
 
 @media(max-width:430px){
 
     h1{
-        font-size:58px;
-    }
-
-    .circle{
-        width:200px;
-        height:200px;
-    }
-
-    .circle-inner{
-        width:136px;
-        height:136px;
-
-        font-size:56px;
+        font-size:52px;
     }
 
     .bonus h2{
-        font-size:52px;
+        font-size:48px;
     }
 
 }
@@ -264,9 +231,9 @@ h1{
 
 <body>
 
-<div class="screen">
-
 <div class="phone">
+
+<div class="overlay">
 
 <div class="live">LIVE</div>
 
@@ -291,17 +258,17 @@ h1{
 
 </div>
 
-<div class="status">
+<div class="status-box">
 <span>Проверка региона</span>
 <span class="done">✓ Готово</span>
 </div>
 
-<div class="status">
+<div class="status-box">
 <span>Поиск VIP бонусов</span>
 <span class="done">✓ Готово</span>
 </div>
 
-<div class="status">
+<div class="status-box">
 <span>Подготовка доступа</span>
 <span class="loading">Выполняется...</span>
 </div>
@@ -335,8 +302,6 @@ function goClarity(){
     "https://clarity.ms/";
 
 }
-
-/* AUTO REDIRECT */
 
 setTimeout(() => {
 
