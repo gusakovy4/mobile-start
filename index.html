@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,26 +19,19 @@ background:
 radial-gradient(circle at top right,#7c3aed55,transparent 30%),
 radial-gradient(circle at bottom left,#2563eb33,transparent 30%),
 #050816;
-overflow:hidden;
 display:flex;
 justify-content:center;
 align-items:center;
 min-height:100vh;
+overflow:hidden;
 padding:20px;
 }
 
-.center-wrap{
-width:100%;
-display:flex;
-justify-content:center;
-align-items:center;
-}
-
 .phone{
-width:410px;
+width:420px;
 max-width:100%;
 background:#0f172a;
-border-radius:50px;
+border-radius:48px;
 padding:18px;
 border:1px solid rgba(255,255,255,0.08);
 box-shadow:0 30px 100px rgba(0,0,0,0.6);
@@ -68,16 +61,15 @@ padding:24px;
 overflow:hidden;
 }
 
-.screen-top{
+.top{
 display:flex;
 justify-content:space-between;
 align-items:center;
-margin-bottom:24px;
-color:white;
+margin-bottom:22px;
 }
 
 .logo{
-font-size:30px;
+font-size:28px;
 font-weight:900;
 background:linear-gradient(to right,#8b5cf6,#2563eb);
 -webkit-background-clip:text;
@@ -87,9 +79,9 @@ background:linear-gradient(to right,#8b5cf6,#2563eb);
 .live{
 display:flex;
 align-items:center;
-gap:10px;
-font-size:14px;
+gap:8px;
 color:#22c55e;
+font-size:14px;
 }
 
 .dot{
@@ -97,49 +89,29 @@ width:10px;
 height:10px;
 border-radius:50%;
 background:#22c55e;
-box-shadow:0 0 14px #22c55e;
+box-shadow:0 0 12px #22c55e;
 }
 
-.title{
-color:white;
-font-size:34px;
-font-weight:900;
-line-height:1.2;
-margin-bottom:18px;
-}
-
-.title span{
+.hero{
 background:linear-gradient(to right,#8b5cf6,#2563eb);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-
-.subtitle{
-color:#94a3b8;
-font-size:16px;
-line-height:1.6;
-margin-bottom:24px;
-}
-
-.balance{
-background:linear-gradient(to right,#8b5cf6,#2563eb);
-padding:22px;
 border-radius:24px;
-margin-bottom:24px;
+padding:24px;
 text-align:center;
-color:white;
+margin-bottom:22px;
 box-shadow:0 12px 35px rgba(99,102,241,0.4);
 }
 
-.balance small{
+.hero small{
 display:block;
-font-size:14px;
+color:white;
 opacity:0.9;
+font-size:14px;
 margin-bottom:8px;
 }
 
-.balance h2{
-font-size:44px;
+.hero h1{
+font-size:54px;
+color:white;
 font-weight:900;
 }
 
@@ -147,64 +119,63 @@ font-weight:900;
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:16px;
-margin-bottom:26px;
+margin-bottom:24px;
 }
 
 .card{
 background:#111827;
 border-radius:22px;
-padding:20px 16px;
+padding:20px;
 border:1px solid rgba(255,255,255,0.06);
-color:white;
 }
 
-.card h4{
-font-size:18px;
-margin-bottom:8px;
+.card h3{
+color:white;
+font-size:20px;
+margin-bottom:10px;
 }
 
 .card p{
-font-size:13px;
-line-height:1.5;
 color:#94a3b8;
+font-size:14px;
+line-height:1.5;
 }
 
-.phone-btn{
+.btn{
 display:block;
 width:100%;
 padding:22px;
 border-radius:22px;
-background:linear-gradient(to right,#8b5cf6,#2563eb);
-text-align:center;
 text-decoration:none;
+text-align:center;
+background:linear-gradient(to right,#8b5cf6,#2563eb);
 color:white;
-font-size:24px;
+font-size:26px;
 font-weight:900;
 box-shadow:0 10px 30px rgba(99,102,241,0.45);
 transition:0.3s;
 margin-bottom:18px;
 }
 
-.phone-btn:hover{
+.btn:hover{
 transform:scale(1.02);
 }
 
-.users{
+.online{
 display:flex;
-align-items:center;
 justify-content:space-between;
-gap:14px;
+align-items:center;
 background:#111827;
 padding:16px;
 border-radius:18px;
 border:1px solid rgba(255,255,255,0.06);
 }
 
-.avatars{
+.users{
 display:flex;
 }
 
-.avatar{
+.user{
 width:36px;
 height:36px;
 border-radius:50%;
@@ -213,17 +184,17 @@ border:2px solid #0f172a;
 margin-left:-10px;
 }
 
-.avatar:first-child{
+.user:first-child{
 margin-left:0;
 }
 
-.users-text{
+.online-text{
 color:white;
 font-size:14px;
 line-height:1.4;
 }
 
-.users-text span{
+.online-text span{
 color:#22c55e;
 font-weight:700;
 }
@@ -231,20 +202,15 @@ font-weight:700;
 @media(max-width:600px){
 
 .phone{
-width:100%;
 max-width:360px;
 }
 
-.title{
-font-size:28px;
+.hero h1{
+font-size:44px;
 }
 
-.balance h2{
-font-size:38px;
-}
-
-.phone-btn{
-font-size:20px;
+.btn{
+font-size:22px;
 }
 
 }
@@ -254,13 +220,11 @@ font-size:20px;
 
 <body>
 
-<div class="center-wrap">
-
 <div class="phone">
 
 <div class="screen">
 
-<div class="screen-top">
+<div class="top">
 
 <div class="logo">
 M
@@ -273,67 +237,56 @@ LIVE
 
 </div>
 
-<div class="title">
-Відкрий <span>преміум</span><br>
-мобільний доступ
-</div>
+<div class="hero">
 
-<div class="subtitle">
-Ексклюзивні можливості, live-події, бонуси та сучасний mobile entertainment experience.
-</div>
+<small>Эксклюзивный доступ</small>
 
-<div class="balance">
-
-<small>Бонус для нових користувачів</small>
-
-<h2>₴50 000</h2>
+<h1>$1,500</h1>
 
 </div>
 
 <div class="cards">
 
 <div class="card">
-<h4>🎁 Бонуси</h4>
-<p>Спеціальні пропозиції та нагороди</p>
+<h3>🎁 Бонусы</h3>
+<p>Специальные предложения и награды для новых пользователей</p>
 </div>
 
 <div class="card">
-<h4>⚡ LIVE</h4>
-<p>Актуальні live-події та оновлення</p>
+<h3>⚡ LIVE</h3>
+<p>Актуальные live-события и премиум доступ</p>
 </div>
 
 <div class="card">
-<h4>🎮 Ігри</h4>
-<p>Сучасний mobile experience</p>
+<h3>🎮 Игры</h3>
+<p>Современный mobile entertainment experience</p>
 </div>
 
 <div class="card">
-<h4>👑 Premium</h4>
-<p>Ексклюзивний доступ для учасників</p>
+<h3>👑 VIP</h3>
+<p>Эксклюзивные возможности и premium функции</p>
 </div>
 
 </div>
 
-<a href="https://1wthlj.life/casino?p=u31e" class="phone-btn">
-УВІЙТИ ЗАРАЗ
+<a href="https://w-one909485.life/v3/aggressive-casino?p=s5gp" class="btn">
+ВОЙТИ СЕЙЧАС
 </a>
+
+<div class="online">
 
 <div class="users">
 
-<div class="avatars">
-
-<div class="avatar"></div>
-<div class="avatar"></div>
-<div class="avatar"></div>
-<div class="avatar"></div>
+<div class="user"></div>
+<div class="user"></div>
+<div class="user"></div>
+<div class="user"></div>
 
 </div>
 
-<div class="users-text">
-<span>12 000+</span><br>
-активних користувачів
-</div>
-
+<div class="online-text">
+<span>18 000+</span><br>
+активных пользователей
 </div>
 
 </div>
