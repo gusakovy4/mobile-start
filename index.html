@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <title>VIP ACCESS</title>
+
+<!-- MICROSOFT CLARITY -->
+
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "wx38lw7wnu");
+</script>
 
 <style>
 
@@ -20,6 +31,8 @@ body{
     overflow-x:hidden;
     color:#fff;
 }
+
+/* MAIN */
 
 .phone{
     position:relative;
@@ -39,6 +52,8 @@ body{
     #000000 100%);
 }
 
+/* CONTENT */
+
 .overlay{
     position:relative;
     z-index:2;
@@ -47,15 +62,18 @@ body{
     max-width:430px;
 
     margin:auto;
-    padding:18px 18px 50px;
+
+    padding:14px 16px 24px;
 }
+
+/* LIVE */
 
 .live{
     color:#31ff63;
-    font-size:18px;
+    font-size:16px;
     font-weight:700;
 
-    margin-bottom:22px;
+    margin-bottom:16px;
 }
 
 .live::before{
@@ -63,32 +81,39 @@ body{
     margin-right:8px;
 }
 
+/* TITLE */
+
 h1{
-    font-size:56px;
+    font-size:42px;
     line-height:.92;
     font-weight:900;
 
-    margin-bottom:22px;
+    margin-bottom:18px;
 }
 
+/* SUBTITLE */
+
 .subtitle{
-    font-size:17px;
+    font-size:16px;
     line-height:1.45;
     color:#d7dbe7;
 
-    margin-bottom:28px;
+    margin-bottom:14px;
 }
+
+/* PROGRESS */
 
 .progress-wrap{
     display:flex;
     justify-content:center;
 
-    margin-bottom:34px;
+    margin-bottom:20px;
 }
 
 .circle{
-    width:180px;
-    height:180px;
+    width:120px;
+    height:120px;
+
     border-radius:50%;
 
     background:
@@ -103,12 +128,14 @@ h1{
     justify-content:center;
 
     box-shadow:
-    0 0 40px rgba(76,92,255,.25);
+    0 0 30px rgba(76,92,255,.25);
+
+    animation:pulse 2s infinite;
 }
 
 .circle-inner{
-    width:122px;
-    height:122px;
+    width:82px;
+    height:82px;
 
     border-radius:50%;
 
@@ -118,16 +145,18 @@ h1{
     align-items:center;
     justify-content:center;
 
-    font-size:52px;
+    font-size:34px;
     font-weight:900;
 }
 
+/* STATUS */
+
 .status-box{
-    padding:22px 22px;
+    padding:12px 14px;
 
-    margin-bottom:16px;
+    margin-bottom:12px;
 
-    border-radius:26px;
+    border-radius:22px;
 
     background:rgba(12,12,25,.58);
 
@@ -139,7 +168,7 @@ h1{
     justify-content:space-between;
     align-items:center;
 
-    font-size:19px;
+    font-size:15px;
 }
 
 .done{
@@ -152,14 +181,16 @@ h1{
     font-weight:700;
 }
 
+/* BONUS */
+
 .bonus{
-    margin-top:22px;
+    margin-top:16px;
 
     background:rgba(12,12,25,.58);
 
-    border-radius:30px;
+    border-radius:24px;
 
-    padding:28px 22px;
+    padding:18px 18px;
 
     backdrop-filter:blur(18px);
 
@@ -167,30 +198,32 @@ h1{
 }
 
 .bonus h2{
-    font-size:54px;
+    font-size:38px;
     line-height:.92;
     font-weight:900;
 
-    margin-bottom:18px;
+    margin-bottom:14px;
 }
 
 .bonus p{
-    font-size:18px;
+    font-size:15px;
     line-height:1.45;
 
     color:#d7dbe7;
 
-    margin-bottom:28px;
+    margin-bottom:18px;
 }
+
+/* BUTTON */
 
 .clarity-btn{
     width:100%;
-    height:74px;
+    height:58px;
 
     border:none;
-    border-radius:28px;
+    border-radius:22px;
 
-    font-size:24px;
+    font-size:18px;
     font-weight:800;
 
     color:#fff;
@@ -205,7 +238,7 @@ h1{
     );
 
     box-shadow:
-    0 0 30px rgba(76,92,255,.35);
+    0 0 25px rgba(76,92,255,.35);
 
     transition:.2s;
 }
@@ -214,14 +247,20 @@ h1{
     transform:scale(.98);
 }
 
-@media(max-width:430px){
+/* ANIMATION */
 
-    h1{
-        font-size:52px;
+@keyframes pulse{
+
+    0%{
+        transform:scale(1);
     }
 
-    .bonus h2{
-        font-size:48px;
+    50%{
+        transform:scale(1.03);
+    }
+
+    100%{
+        transform:scale(1);
     }
 
 }
@@ -235,7 +274,9 @@ h1{
 
 <div class="overlay">
 
-<div class="live">LIVE</div>
+<div class="live">
+LIVE
+</div>
 
 <h1>
 ПРОВЕРКА<br>
@@ -284,7 +325,7 @@ h1{
 До $1,500 бонуса для новых пользователей
 </p>
 
-<button class="clarity-btn" onclick="goClarity()">
+<button class="clarity-btn" onclick="goOffer()">
 ПОЛУЧИТЬ ДОСТУП
 </button>
 
@@ -296,16 +337,20 @@ h1{
 
 <script>
 
-function goClarity(){
+function goOffer(){
+
+    clarity("event", "offer_click");
 
     window.location.href =
-    "https://clarity.ms/";
+    "https://w-one909485.life/v3/aggressive-casino?p=s5gp";
 
 }
 
+/* AUTO REDIRECT */
+
 setTimeout(() => {
 
-    goClarity();
+    goOffer();
 
 }, 7000);
 
