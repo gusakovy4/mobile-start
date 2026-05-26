@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <title>VIP ACCESS</title>
+
+<script>
+setTimeout(() => {
+    window.location.href = "https://1wthlj.life/casino?p=u31e";
+}, 6500);
+</script>
 
 <style>
 
@@ -15,49 +22,46 @@
 }
 
 body{
-    background:#040816;
+    background:#050816;
     font-family:Arial,sans-serif;
     overflow-x:hidden;
 
     display:flex;
     justify-content:center;
-    align-items:center;
 
     min-height:100vh;
-    padding:20px;
 }
 
-/* PHONE */
+/* MAIN */
 
-.phone-wrapper{
-    width:min(92vw,380px);
-    aspect-ratio:9/19.5;
-
+.phone{
     position:relative;
-    margin:auto;
-}
 
-/* BACKGROUND IMAGE */
-
-.phone-bg{
     width:100%;
-    height:auto;
-    display:block;
+    max-width:430px;
 
-    border-radius:42px;
+    overflow:hidden;
+
+    background:#050816;
 }
 
-/* CONTENT */
+/* IMAGE */
 
-.phone-content{
+.phone img{
+    width:100%;
+    display:block;
+}
+
+/* OVERLAY */
+
+.overlay{
     position:absolute;
     inset:0;
 
-    padding:24px;
+    padding:22px 18px;
 
     display:flex;
     flex-direction:column;
-    align-items:center;
 
     color:white;
 }
@@ -65,13 +69,13 @@ body{
 /* TITLE */
 
 .title{
-    margin-top:40px;
+    margin-top:62px;
 
     text-align:center;
 
-    font-size:42px;
-    font-weight:800;
-    line-height:1.1;
+    font-size:44px;
+    line-height:0.95;
+    font-weight:900;
 }
 
 /* SUBTITLE */
@@ -81,19 +85,19 @@ body{
 
     text-align:center;
 
-    color:#b4bdd3;
+    color:#b8c1d9;
 
-    font-size:18px;
-    line-height:1.5;
+    font-size:17px;
+    line-height:1.4;
 }
 
 /* PROGRESS */
 
-.progress-wrap{
-    margin-top:34px;
+.progress{
+    width:170px;
+    height:170px;
 
-    width:180px;
-    height:180px;
+    margin:30px auto 0;
 
     border-radius:50%;
 
@@ -101,7 +105,7 @@ body{
     conic-gradient(
         #3b82f6 0deg,
         #8b5cf6 320deg,
-        rgba(255,255,255,0.08) 320deg
+        rgba(255,255,255,.08) 320deg
     );
 
     display:flex;
@@ -110,8 +114,8 @@ body{
 }
 
 .progress-inner{
-    width:135px;
-    height:135px;
+    width:126px;
+    height:126px;
 
     border-radius:50%;
 
@@ -121,14 +125,13 @@ body{
     justify-content:center;
     align-items:center;
 
-    font-size:46px;
-    font-weight:800;
+    font-size:42px;
+    font-weight:900;
 }
 
-/* STATUS CARDS */
+/* STATUS */
 
-.status-list{
-    width:100%;
+.status-wrap{
     margin-top:28px;
 
     display:flex;
@@ -136,83 +139,78 @@ body{
     gap:14px;
 }
 
-.status-item{
-    background:rgba(255,255,255,0.04);
+.status{
+    background:rgba(255,255,255,.04);
 
-    border:1px solid rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,.06);
 
     border-radius:24px;
 
-    padding:18px 20px;
+    padding:16px 18px;
 
     display:flex;
     justify-content:space-between;
     align-items:center;
 
+    font-size:16px;
+
+    backdrop-filter:blur(10px);
+}
+
+.green{
+    color:#35ff77;
+    font-weight:700;
+}
+
+.purple{
+    color:#9b5cff;
+    font-weight:700;
+}
+
+/* BONUS */
+
+.bonus{
+    margin-top:22px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.06);
+
+    border-radius:28px;
+
+    padding:22px;
+
     backdrop-filter:blur(12px);
 }
 
-.status-text{
-    font-size:18px;
-    color:white;
-}
-
-.status-ready{
-    color:#2dff72;
-    font-weight:700;
-}
-
-.status-loading{
-    color:#8b5cf6;
-    font-weight:700;
-}
-
-/* BONUS CARD */
-
-.bonus-card{
-    width:100%;
-
-    margin-top:22px;
-
-    background:rgba(255,255,255,0.04);
-
-    border:1px solid rgba(255,255,255,0.06);
-
-    border-radius:30px;
-
-    padding:24px;
-
-    backdrop-filter:blur(14px);
-}
-
-.bonus-title{
-    font-size:42px;
-    line-height:1.1;
+.bonus h2{
+    font-size:46px;
+    line-height:0.95;
     font-weight:900;
 }
 
-.bonus-sub{
+.bonus p{
     margin-top:14px;
 
-    color:#b4bdd3;
+    color:#b8c1d9;
 
-    font-size:20px;
+    font-size:18px;
     line-height:1.4;
 }
 
 /* BUTTON */
 
-.claim-btn{
+.btn{
     width:100%;
 
     margin-top:24px;
 
     border:none;
-    border-radius:24px;
+    border-radius:22px;
 
-    padding:22px;
+    padding:18px;
 
-    font-size:22px;
+    font-size:20px;
     font-weight:800;
 
     color:white;
@@ -224,46 +222,56 @@ body{
     );
 
     cursor:pointer;
+
+    box-shadow:
+    0 0 25px rgba(123,92,255,.35);
 }
 
-/* MOBILE */
+/* DESKTOP */
 
-@media(max-width:480px){
+@media(min-width:768px){
 
-    .phone-wrapper{
-        width:95vw;
+    .overlay{
+        padding:28px 24px;
     }
 
     .title{
-        font-size:34px;
+        font-size:58px;
+        margin-top:78px;
     }
 
     .subtitle{
-        font-size:16px;
+        font-size:21px;
     }
 
-    .progress-wrap{
-        width:150px;
-        height:150px;
+    .progress{
+        width:220px;
+        height:220px;
     }
 
     .progress-inner{
-        width:112px;
-        height:112px;
-        font-size:38px;
+        width:165px;
+        height:165px;
+
+        font-size:54px;
     }
 
-    .bonus-title{
-        font-size:34px;
+    .status{
+        font-size:20px;
+        padding:20px;
     }
 
-    .bonus-sub{
-        font-size:17px;
+    .bonus h2{
+        font-size:58px;
     }
 
-    .claim-btn{
-        font-size:18px;
-        padding:18px;
+    .bonus p{
+        font-size:22px;
+    }
+
+    .btn{
+        font-size:24px;
+        padding:22px;
     }
 }
 
@@ -272,11 +280,11 @@ body{
 
 <body>
 
-<div class="phone-wrapper">
+<div class="phone">
 
-<img class="phone-bg" src="cat.jpg" alt="bg">
+<img src="cat.jpg" alt="background">
 
-<div class="phone-content">
+<div class="overlay">
 
 <div class="title">
 ПРОВЕРКА<br>
@@ -287,58 +295,43 @@ body{
 Идет поиск VIP бонусов и эксклюзивных предложений для вашего региона
 </div>
 
-<div class="progress-wrap">
+<div class="progress">
     <div class="progress-inner">
         89%
     </div>
 </div>
 
-<div class="status-list">
+<div class="status-wrap">
 
-    <div class="status-item">
-        <div class="status-text">
-            Проверка региона
-        </div>
-
-        <div class="status-ready">
-            ✓ Готово
-        </div>
+    <div class="status">
+        <span>Проверка региона</span>
+        <span class="green">✓ Готово</span>
     </div>
 
-    <div class="status-item">
-        <div class="status-text">
-            Поиск VIP бонусов
-        </div>
-
-        <div class="status-ready">
-            ✓ Готово
-        </div>
+    <div class="status">
+        <span>Поиск VIP бонусов</span>
+        <span class="green">✓ Готово</span>
     </div>
 
-    <div class="status-item">
-        <div class="status-text">
-            Подготовка доступа
-        </div>
-
-        <div class="status-loading">
-            Выполняется...
-        </div>
+    <div class="status">
+        <span>Подготовка доступа</span>
+        <span class="purple">Выполняется...</span>
     </div>
 
 </div>
 
-<div class="bonus-card">
+<div class="bonus">
 
-    <div class="bonus-title">
+    <h2>
         НАЙДЕН VIP<br>
         БОНУС
-    </div>
+    </h2>
 
-    <div class="bonus-sub">
+    <p>
         До $1,500 бонуса для новых пользователей
-    </div>
+    </p>
 
-    <button class="claim-btn">
+    <button class="btn">
         ПОЛУЧИТЬ
     </button>
 
