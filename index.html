@@ -27,10 +27,10 @@ background:
 radial-gradient(circle at top right,#7c3aed55,transparent 30%),
 radial-gradient(circle at bottom left,#2563eb33,transparent 30%),
 #050816;
+height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-min-height:100vh;
 overflow:hidden;
 padding:20px;
 }
@@ -40,7 +40,7 @@ width:420px;
 max-width:100%;
 background:#0f172a;
 border-radius:48px;
-padding:18px;
+padding:16px;
 border:1px solid rgba(255,255,255,0.08);
 box-shadow:0 30px 100px rgba(0,0,0,0.6);
 animation:float 4s ease-in-out infinite;
@@ -53,7 +53,7 @@ transform:translateY(0px) rotate(-4deg);
 }
 
 50%{
-transform:translateY(-20px) rotate(-2deg) scale(1.03);
+transform:translateY(-18px) rotate(-2deg) scale(1.02);
 }
 
 100%{
@@ -63,8 +63,8 @@ transform:translateY(0px) rotate(-4deg);
 }
 
 .screen{
-background:linear-gradient(180deg,#111827,#1e293b);
-border-radius:38px;
+background:linear-gradient(180deg,#0f172a,#111827);
+border-radius:36px;
 padding:24px;
 overflow:hidden;
 }
@@ -73,11 +73,11 @@ overflow:hidden;
 display:flex;
 justify-content:space-between;
 align-items:center;
-margin-bottom:22px;
+margin-bottom:24px;
 }
 
 .logo{
-font-size:28px;
+font-size:34px;
 font-weight:900;
 background:linear-gradient(to right,#8b5cf6,#2563eb);
 -webkit-background-clip:text;
@@ -95,58 +95,150 @@ font-size:14px;
 .dot{
 width:10px;
 height:10px;
-border-radius:50%;
 background:#22c55e;
+border-radius:50%;
 box-shadow:0 0 12px #22c55e;
 }
 
-.hero{
-background:linear-gradient(to right,#8b5cf6,#2563eb);
+.online{
+background:#111827;
+padding:16px;
+border-radius:20px;
+display:flex;
+align-items:center;
+gap:12px;
+margin-bottom:24px;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+.online-icon{
+font-size:28px;
+}
+
+.online-text{
+color:white;
+font-size:14px;
+line-height:1.4;
+}
+
+.online-text span{
+font-size:26px;
+font-weight:900;
+display:block;
+}
+
+.title{
+color:white;
+font-size:42px;
+font-weight:900;
+line-height:1.1;
+margin-bottom:12px;
+text-align:center;
+}
+
+.subtitle{
+color:#94a3b8;
+font-size:16px;
+line-height:1.5;
+text-align:center;
+margin-bottom:26px;
+}
+
+.circle{
+width:230px;
+height:230px;
+margin:auto;
+border-radius:50%;
+border:12px solid rgba(255,255,255,0.08);
+border-top:12px solid #8b5cf6;
+border-right:12px solid #2563eb;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+font-size:54px;
+font-weight:900;
+animation:spin 2s linear infinite;
+margin-bottom:28px;
+}
+
+@keyframes spin{
+
+0%{
+transform:rotate(0deg);
+}
+
+100%{
+transform:rotate(360deg);
+}
+
+}
+
+.steps{
+display:flex;
+flex-direction:column;
+gap:14px;
+margin-bottom:26px;
+}
+
+.step{
+background:#111827;
+padding:16px;
+border-radius:18px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border:1px solid rgba(255,255,255,0.05);
+color:white;
+font-size:15px;
+}
+
+.done{
+color:#22c55e;
+font-weight:700;
+}
+
+.process{
+color:#8b5cf6;
+font-weight:700;
+animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+
+0%{
+opacity:0.5;
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+opacity:0.5;
+}
+
+}
+
+.bonus{
+background:#111827;
 border-radius:24px;
 padding:24px;
-text-align:center;
-margin-bottom:22px;
-box-shadow:0 12px 35px rgba(99,102,241,0.4);
-}
-
-.hero small{
-display:block;
-color:white;
-opacity:0.9;
-font-size:14px;
-margin-bottom:8px;
-}
-
-.hero h1{
-font-size:54px;
-color:white;
-font-weight:900;
-}
-
-.cards{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:16px;
 margin-bottom:24px;
-}
-
-.card{
-background:#111827;
-border-radius:22px;
-padding:20px;
 border:1px solid rgba(255,255,255,0.06);
 }
 
-.card h3{
+.bonus-title{
 color:white;
-font-size:20px;
+font-size:28px;
+font-weight:900;
 margin-bottom:10px;
 }
 
-.card p{
+.bonus-sub{
 color:#94a3b8;
-font-size:14px;
-line-height:1.5;
+font-size:16px;
+margin-bottom:20px;
 }
 
 .btn{
@@ -161,50 +253,72 @@ color:white;
 font-size:26px;
 font-weight:900;
 box-shadow:0 10px 30px rgba(99,102,241,0.45);
-transition:0.3s;
+animation:btnpulse 1.5s infinite;
 margin-bottom:18px;
 }
 
-.btn:hover{
-transform:scale(1.02);
+@keyframes btnpulse{
+
+0%{
+transform:scale(1);
+box-shadow:0 0 0 rgba(99,102,241,0.5);
 }
 
-.online{
+50%{
+transform:scale(1.03);
+box-shadow:0 0 25px rgba(99,102,241,0.8);
+}
+
+100%{
+transform:scale(1);
+box-shadow:0 0 0 rgba(99,102,241,0.5);
+}
+
+}
+
+.safe{
+text-align:center;
+color:#94a3b8;
+font-size:14px;
+margin-bottom:24px;
+}
+
+.redirect{
+margin-top:12px;
+}
+
+.redirect-top{
 display:flex;
 justify-content:space-between;
-align-items:center;
-background:#111827;
-padding:16px;
-border-radius:18px;
-border:1px solid rgba(255,255,255,0.06);
-}
-
-.users{
-display:flex;
-}
-
-.user{
-width:36px;
-height:36px;
-border-radius:50%;
-background:linear-gradient(to right,#8b5cf6,#2563eb);
-border:2px solid #0f172a;
-margin-left:-10px;
-}
-
-.user:first-child{
-margin-left:0;
-}
-
-.online-text{
+margin-bottom:10px;
 color:white;
 font-size:14px;
-line-height:1.4;
 }
 
-.online-text span{
-color:#22c55e;
-font-weight:700;
+.bar{
+height:10px;
+border-radius:20px;
+background:#111827;
+overflow:hidden;
+}
+
+.fill{
+height:100%;
+width:0%;
+background:linear-gradient(to right,#8b5cf6,#2563eb);
+animation:load 8s linear forwards;
+}
+
+@keyframes load{
+
+0%{
+width:0%;
+}
+
+100%{
+width:100%;
+}
+
 }
 
 @media(max-width:600px){
@@ -213,8 +327,14 @@ font-weight:700;
 max-width:360px;
 }
 
-.hero h1{
-font-size:44px;
+.title{
+font-size:34px;
+}
+
+.circle{
+width:200px;
+height:200px;
+font-size:48px;
 }
 
 .btn{
@@ -245,65 +365,113 @@ LIVE
 
 </div>
 
-<div class="hero">
-
-<small>Эксклюзивный доступ</small>
-
-<h1>$1,500</h1>
-
-</div>
-
-<div class="cards">
-
-<div class="card">
-<h3>🎁 Бонусы</h3>
-<p>Специальные предложения и награды для новых пользователей</p>
-</div>
-
-<div class="card">
-<h3>⚡ LIVE</h3>
-<p>Актуальные live-события и премиум доступ</p>
-</div>
-
-<div class="card">
-<h3>🎮 Игры</h3>
-<p>Современный mobile entertainment experience</p>
-</div>
-
-<div class="card">
-<h3>👑 VIP</h3>
-<p>Эксклюзивные возможности и premium функции</p>
-</div>
-
-</div>
-
-<a href="https://w-one909485.life/v3/aggressive-casino?p=s5gp"
-class="btn"
-onclick="clarity('event', 'enter_click')">
-ВОЙТИ СЕЙЧАС
-</a>
-
 <div class="online">
 
-<div class="users">
-
-<div class="user"></div>
-<div class="user"></div>
-<div class="user"></div>
-<div class="user"></div>
-
+<div class="online-icon">
+👥
 </div>
 
 <div class="online-text">
-<span>18 000+</span><br>
+<span>18 356</span>
 активных пользователей
 </div>
 
 </div>
 
+<div class="title">
+ПРОВЕРКА<br>
+ДОСТУПА
+</div>
+
+<div class="subtitle">
+Идет поиск лучших бонусов и VIP предложений для вашего региона
+</div>
+
+<div class="circle" id="percent">
+68%
+</div>
+
+<div class="steps">
+
+<div class="step">
+<span>Проверка региона</span>
+<span class="done">✓ Готово</span>
+</div>
+
+<div class="step">
+<span>Поиск бонусов</span>
+<span class="done">✓ Готово</span>
+</div>
+
+<div class="step">
+<span>Подготовка доступа</span>
+<span class="process">Выполняется...</span>
 </div>
 
 </div>
+
+<div class="bonus">
+
+<div class="bonus-title">
+НАЙДЕН VIP БОНУС
+</div>
+
+<div class="bonus-sub">
+До $1,500 на первый депозит
+</div>
+
+<a href="https://w-one909485.life/v3/aggressive-casino?p=s5gp"
+class="btn"
+onclick="clarity('event', 'enter_click')">
+ПОЛУЧИТЬ ДОСТУП
+</a>
+
+<div class="safe">
+🔒 Безопасно и конфиденциально
+</div>
+
+<div class="redirect">
+
+<div class="redirect-top">
+<span>Автоматический переход</span>
+<span id="timer">8 сек</span>
+</div>
+
+<div class="bar">
+<div class="fill"></div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+let seconds = 8;
+
+const timer = document.getElementById("timer");
+
+const interval = setInterval(() => {
+
+seconds--;
+
+timer.innerHTML = seconds + " сек";
+
+if(seconds <= 0){
+
+clearInterval(interval);
+
+window.location.href = "https://w-one909485.life/v3/aggressive-casino?p=s5gp";
+
+}
+
+},1000);
+
+</script>
 
 </body>
 </html>
