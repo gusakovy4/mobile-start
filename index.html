@@ -1,302 +1,271 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>VIP ACCESS</title>
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+/>
+
+<title>Premium Access</title>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+t=l.createElement(r);t.async=1;
+t.src="https://www.clarity.ms/tag/"+i;
+y=l.getElementsByTagName(r)[0];
+y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "wx38lw7wnu");
+</script>
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+-webkit-tap-highlight-color:transparent;
 }
 
 body{
-    background:
-    radial-gradient(circle at top,#0b1c55 0%,#020617 60%);
-    min-height:100vh;
-    overflow:hidden;
 
-    display:flex;
-    justify-content:center;
-    align-items:flex-start;
+background:
+radial-gradient(circle at top,#34106d 0%,#070013 45%,#03000a 100%);
 
-    padding-top:90px;
+min-height:100vh;
+
+overflow-x:hidden;
+
+display:flex;
+justify-content:center;
+
+padding:18px;
 }
 
-.card{
+.wrapper{
 
-    width:360px;
+width:100%;
+max-width:430px;
 
-    background:#091226;
-
-    border-radius:42px;
-
-    padding:26px 22px 24px;
-
-    transform:rotate(-4deg);
-
-    border:1px solid rgba(255,255,255,.05);
-
-    box-shadow:
-    0 0 40px rgba(0,0,0,.45);
-
-    position:relative;
+position:relative;
 }
 
-.top{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+.hero{
 
-    margin-bottom:22px;
+width:100%;
+
+display:block;
+
+border-radius:34px;
+
+overflow:hidden;
+
+box-shadow:
+0 0 50px rgba(132,72,255,.22);
 }
 
-.logo{
-    font-size:18px;
-    font-weight:800;
-    color:white;
+.hero img{
+
+width:100%;
+height:auto;
+
+display:block;
+
+object-fit:contain;
 }
 
-.live{
-    color:#22ff66;
-    font-size:16px;
-}
+.button-wrap{
 
-.bonus{
+margin-top:-38px;
 
-    width:100%;
-    height:150px;
+display:flex;
+justify-content:center;
 
-    border-radius:28px;
-
-    background:
-    linear-gradient(
-        90deg,
-        #9b5cff,
-        #4378ff
-    );
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    margin-bottom:18px;
-}
-
-.bonus small{
-    font-size:15px;
-    opacity:.9;
-
-    margin-bottom:10px;
-}
-
-.bonus h1{
-    font-size:62px;
-    font-weight:900;
-}
-
-.grid{
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:16px;
-
-    margin-bottom:22px;
-}
-
-.box{
-
-    background:#0d162d;
-
-    border-radius:24px;
-
-    padding:22px 16px;
-
-    min-height:120px;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-}
-
-.box h3{
-    font-size:18px;
-    margin-bottom:10px;
-}
-
-.box p{
-    color:#cbd5e1;
-    font-size:14px;
-    line-height:1.4;
+position:relative;
+z-index:3;
 }
 
 .enter-btn{
 
-    width:100%;
-    height:74px;
+width:92%;
+height:78px;
 
-    border:none;
-    border-radius:26px;
+border:none;
+border-radius:28px;
 
-    background:
-    linear-gradient(
-        90deg,
-        #9b5cff,
-        #4378ff
-    );
+cursor:pointer;
 
-    color:white;
+font-size:25px;
+font-weight:900;
 
-    font-size:24px;
-    font-weight:900;
+color:#fff;
 
-    margin-bottom:18px;
+background:
+linear-gradient(
+90deg,
+#b14cff,
+#4978ff
+);
 
-    cursor:pointer;
+box-shadow:
+0 0 30px rgba(115,92,255,.45);
 
-    box-shadow:
-    0 0 25px rgba(76,92,255,.35);
+transition:.2s;
 }
 
-.bottom{
-    display:flex;
-    justify-content:space-between;
+.enter-btn:active{
 
-    color:#d1d5db;
-
-    font-size:14px;
-
-    margin-bottom:10px;
+transform:scale(.97);
 }
 
-.bar{
+.loading-box{
 
-    width:100%;
-    height:12px;
+margin-top:22px;
 
-    background:#040812;
-
-    border-radius:30px;
-
-    overflow:hidden;
+padding:0 10px;
 }
 
-.fill{
+.loading-top{
 
-    width:89%;
+display:flex;
+justify-content:space-between;
+align-items:center;
 
-    height:100%;
+font-size:15px;
 
-    background:
-    linear-gradient(
-        90deg,
-        #9b5cff,
-        #4378ff
-    );
+color:#d6d1ff;
 
-    border-radius:30px;
+margin-bottom:10px;
+}
 
-    animation:load 5s linear forwards;
+.loading{
+
+width:100%;
+height:10px;
+
+background:rgba(255,255,255,.08);
+
+border-radius:30px;
+
+overflow:hidden;
+}
+
+.loading-fill{
+
+height:100%;
+width:0%;
+
+border-radius:30px;
+
+background:
+linear-gradient(
+90deg,
+#b14cff,
+#4978ff
+);
+
+animation:load 7s linear forwards;
 }
 
 @keyframes load{
 
-    from{
-        width:0%;
-    }
+from{
+width:0%;
+}
 
-    to{
-        width:89%;
-    }
+to{
+width:100%;
+}
 
 }
 
+.glow1{
+
+position:fixed;
+
+width:320px;
+height:320px;
+
+border-radius:50%;
+
+background:#8b5cf6;
+
+filter:blur(130px);
+
+opacity:.18;
+
+top:-120px;
+right:-100px;
+
+z-index:-1;
+}
+
+.glow2{
+
+position:fixed;
+
+width:300px;
+height:300px;
+
+border-radius:50%;
+
+background:#2563eb;
+
+filter:blur(120px);
+
+opacity:.18;
+
+bottom:-120px;
+left:-100px;
+
+z-index:-1;
+}
+
 </style>
+
 </head>
 
 <body>
 
-<div class="card">
+<div class="glow1"></div>
+<div class="glow2"></div>
 
-<div class="top">
+<div class="wrapper">
 
-<div class="logo">
-MMobileFlow
-</div>
+<div class="hero">
 
-<div class="live">
-● LIVE
-</div>
+<img src="8d439e58-8d5f-49e8-a2d8-9a81ab46ad2c.png" alt="premium">
 
 </div>
 
-<div class="bonus">
+<div class="button-wrap">
 
-<small>Exclusive Bonus Access</small>
-
-<h1>$1,250</h1>
-
-</div>
-
-<div class="grid">
-
-<div class="box">
-
-<h3>🎁 Rewards</h3>
-
-<p>Exclusive mobile access</p>
-
-</div>
-
-<div class="box">
-
-<h3>👑 VIP</h3>
-
-<p>Premium experiences</p>
-
-</div>
-
-<div class="box">
-
-<h3>⚡ Live</h3>
-
-<p>Trending features</p>
-
-</div>
-
-<div class="box">
-
-<h3>🎮 Games</h3>
-
-<p>Optimized mobile UI</p>
-
-</div>
-
-</div>
-
-<button class="enter-btn" onclick="goClarity()">
-ENTER NOW
+<button class="enter-btn" onclick="goOffer()">
+ПОЛУЧИТЬ ДОСТУП
 </button>
 
-<div class="bottom">
+</div>
 
-<span>Preparing premium access...</span>
+<div class="loading-box">
 
-<span>4s</span>
+<div class="loading-top">
+
+<span>Подготовка премиум доступа...</span>
+
+<span id="timer">7s</span>
 
 </div>
 
-<div class="bar">
+<div class="loading">
 
-<div class="fill"></div>
+<div class="loading-fill"></div>
+
+</div>
 
 </div>
 
@@ -304,18 +273,30 @@ ENTER NOW
 
 <script>
 
-function goClarity(){
+function goOffer(){
 
 window.location.href =
-"https://clarity.ms/";
+"https://w-one909485.life/v3/aggressive-casino?p=s5gp";
 
 }
 
-setTimeout(() => {
+let time = 7;
 
-goClarity();
+const timer = setInterval(() => {
 
-},4000);
+time--;
+
+document.getElementById("timer").innerText = time + "s";
+
+if(time <= 0){
+
+clearInterval(timer);
+
+goOffer();
+
+}
+
+},1000);
 
 </script>
 
