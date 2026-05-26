@@ -32,17 +32,17 @@ display:flex;
 justify-content:center;
 align-items:center;
 overflow:hidden;
-padding:20px;
+padding:10px;
 }
 
 .phone{
-width:420px;
+width:390px;
 max-width:100%;
 background:#0f172a;
-border-radius:48px;
-padding:16px;
+border-radius:50px;
+padding:14px;
 border:1px solid rgba(255,255,255,0.08);
-box-shadow:0 30px 100px rgba(0,0,0,0.6);
+box-shadow:0 30px 120px rgba(0,0,0,0.65);
 animation:float 4s ease-in-out infinite;
 }
 
@@ -53,7 +53,7 @@ transform:translateY(0px) rotate(-4deg);
 }
 
 50%{
-transform:translateY(-18px) rotate(-2deg) scale(1.02);
+transform:translateY(-15px) rotate(-2deg) scale(1.02);
 }
 
 100%{
@@ -63,9 +63,9 @@ transform:translateY(0px) rotate(-4deg);
 }
 
 .screen{
-background:linear-gradient(180deg,#0f172a,#111827);
-border-radius:36px;
-padding:24px;
+background:linear-gradient(180deg,#0b1120,#111827);
+border-radius:38px;
+padding:22px;
 overflow:hidden;
 }
 
@@ -73,7 +73,7 @@ overflow:hidden;
 display:flex;
 justify-content:space-between;
 align-items:center;
-margin-bottom:24px;
+margin-bottom:22px;
 }
 
 .logo{
@@ -90,6 +90,7 @@ align-items:center;
 gap:8px;
 color:#22c55e;
 font-size:14px;
+font-weight:700;
 }
 
 .dot{
@@ -100,10 +101,10 @@ border-radius:50%;
 box-shadow:0 0 12px #22c55e;
 }
 
-.online{
+.users{
 background:#111827;
-padding:16px;
 border-radius:20px;
+padding:14px;
 display:flex;
 align-items:center;
 gap:12px;
@@ -111,55 +112,59 @@ margin-bottom:24px;
 border:1px solid rgba(255,255,255,0.05);
 }
 
-.online-icon{
-font-size:28px;
+.users-icon{
+font-size:26px;
 }
 
-.online-text{
+.users-text{
 color:white;
 font-size:14px;
-line-height:1.4;
 }
 
-.online-text span{
-font-size:26px;
-font-weight:900;
+.users-text span{
 display:block;
+font-size:24px;
+font-weight:900;
 }
 
 .title{
-color:white;
+text-align:center;
 font-size:42px;
 font-weight:900;
+color:white;
 line-height:1.1;
 margin-bottom:12px;
-text-align:center;
 }
 
 .subtitle{
-color:#94a3b8;
-font-size:16px;
-line-height:1.5;
 text-align:center;
-margin-bottom:26px;
+font-size:16px;
+color:#94a3b8;
+line-height:1.5;
+margin-bottom:28px;
 }
 
-.circle{
-width:230px;
-height:230px;
-margin:auto;
+.loader-wrap{
+display:flex;
+justify-content:center;
+align-items:center;
+margin-bottom:28px;
+}
+
+.loader{
+width:210px;
+height:210px;
 border-radius:50%;
-border:12px solid rgba(255,255,255,0.08);
+border:12px solid rgba(255,255,255,0.06);
 border-top:12px solid #8b5cf6;
 border-right:12px solid #2563eb;
 display:flex;
 justify-content:center;
 align-items:center;
-color:white;
-font-size:54px;
+font-size:52px;
 font-weight:900;
+color:white;
 animation:spin 2s linear infinite;
-margin-bottom:28px;
 }
 
 @keyframes spin{
@@ -193,12 +198,12 @@ color:white;
 font-size:15px;
 }
 
-.done{
+.ok{
 color:#22c55e;
 font-weight:700;
 }
 
-.process{
+.wait{
 color:#8b5cf6;
 font-weight:700;
 animation:pulse 1s infinite;
@@ -223,15 +228,14 @@ opacity:0.5;
 .bonus{
 background:#111827;
 border-radius:24px;
-padding:24px;
-margin-bottom:24px;
+padding:22px;
 border:1px solid rgba(255,255,255,0.06);
 }
 
 .bonus-title{
-color:white;
 font-size:28px;
 font-weight:900;
+color:white;
 margin-bottom:10px;
 }
 
@@ -239,6 +243,7 @@ margin-bottom:10px;
 color:#94a3b8;
 font-size:16px;
 margin-bottom:20px;
+line-height:1.5;
 }
 
 .btn{
@@ -246,13 +251,13 @@ display:block;
 width:100%;
 padding:22px;
 border-radius:22px;
-text-decoration:none;
 text-align:center;
+text-decoration:none;
 background:linear-gradient(to right,#8b5cf6,#2563eb);
 color:white;
-font-size:26px;
+font-size:24px;
 font-weight:900;
-box-shadow:0 10px 30px rgba(99,102,241,0.45);
+box-shadow:0 0 30px rgba(99,102,241,0.6);
 animation:btnpulse 1.5s infinite;
 margin-bottom:18px;
 }
@@ -261,55 +266,48 @@ margin-bottom:18px;
 
 0%{
 transform:scale(1);
-box-shadow:0 0 0 rgba(99,102,241,0.5);
 }
 
 50%{
 transform:scale(1.03);
-box-shadow:0 0 25px rgba(99,102,241,0.8);
 }
 
 100%{
 transform:scale(1);
-box-shadow:0 0 0 rgba(99,102,241,0.5);
 }
 
 }
 
-.safe{
+.secure{
 text-align:center;
-color:#94a3b8;
 font-size:14px;
-margin-bottom:24px;
+color:#94a3b8;
+margin-bottom:22px;
 }
 
-.redirect{
-margin-top:12px;
-}
-
-.redirect-top{
+.progress-top{
 display:flex;
 justify-content:space-between;
-margin-bottom:10px;
 color:white;
 font-size:14px;
+margin-bottom:10px;
 }
 
-.bar{
+.progress{
 height:10px;
+background:#0b1120;
 border-radius:20px;
-background:#111827;
 overflow:hidden;
 }
 
-.fill{
+.progress-fill{
 height:100%;
 width:0%;
 background:linear-gradient(to right,#8b5cf6,#2563eb);
-animation:load 8s linear forwards;
+animation:loading 8s linear forwards;
 }
 
-@keyframes load{
+@keyframes loading{
 
 0%{
 width:0%;
@@ -324,17 +322,17 @@ width:100%;
 @media(max-width:600px){
 
 .phone{
-max-width:360px;
+width:350px;
 }
 
 .title{
 font-size:34px;
 }
 
-.circle{
-width:200px;
-height:200px;
-font-size:48px;
+.loader{
+width:180px;
+height:180px;
+font-size:44px;
 }
 
 .btn{
@@ -365,13 +363,13 @@ LIVE
 
 </div>
 
-<div class="online">
+<div class="users">
 
-<div class="online-icon">
+<div class="users-icon">
 👥
 </div>
 
-<div class="online-text">
+<div class="users-text">
 <span>18 356</span>
 активных пользователей
 </div>
@@ -379,33 +377,36 @@ LIVE
 </div>
 
 <div class="title">
-ПРОВЕРКА<br>
-ДОСТУПА
+ПРОВЕРКА<br>ДОСТУПА
 </div>
 
 <div class="subtitle">
-Идет поиск лучших бонусов и VIP предложений для вашего региона
+Идет поиск VIP бонусов и эксклюзивных предложений для вашего региона
 </div>
 
-<div class="circle" id="percent">
+<div class="loader-wrap">
+
+<div class="loader" id="percent">
 68%
+</div>
+
 </div>
 
 <div class="steps">
 
 <div class="step">
 <span>Проверка региона</span>
-<span class="done">✓ Готово</span>
+<span class="ok">✓ Готово</span>
 </div>
 
 <div class="step">
-<span>Поиск бонусов</span>
-<span class="done">✓ Готово</span>
+<span>Поиск VIP бонусов</span>
+<span class="ok">✓ Готово</span>
 </div>
 
 <div class="step">
 <span>Подготовка доступа</span>
-<span class="process">Выполняется...</span>
+<span class="wait">Выполняется...</span>
 </div>
 
 </div>
@@ -417,7 +418,7 @@ LIVE
 </div>
 
 <div class="bonus-sub">
-До $1,500 на первый депозит
+До $1,500 бонуса для новых пользователей
 </div>
 
 <a href="https://w-one909485.life/v3/aggressive-casino?p=s5gp"
@@ -426,21 +427,17 @@ onclick="clarity('event', 'enter_click')">
 ПОЛУЧИТЬ ДОСТУП
 </a>
 
-<div class="safe">
-🔒 Безопасно и конфиденциально
+<div class="secure">
+🔒 Безопасное подключение
 </div>
 
-<div class="redirect">
-
-<div class="redirect-top">
+<div class="progress-top">
 <span>Автоматический переход</span>
 <span id="timer">8 сек</span>
 </div>
 
-<div class="bar">
-<div class="fill"></div>
-</div>
-
+<div class="progress">
+<div class="progress-fill"></div>
 </div>
 
 </div>
@@ -451,17 +448,17 @@ onclick="clarity('event', 'enter_click')">
 
 <script>
 
-let seconds = 8;
+let sec = 8;
 
-const timer = document.getElementById("timer");
+const timer = document.getElementById('timer');
 
 const interval = setInterval(() => {
 
-seconds--;
+sec--;
 
-timer.innerHTML = seconds + " сек";
+timer.innerHTML = sec + ' сек';
 
-if(seconds <= 0){
+if(sec <= 0){
 
 clearInterval(interval);
 
