@@ -16,211 +16,207 @@
 }
 
 body{
-    background:#020617;
-    overflow-x:hidden;
-    color:white;
-}
-
-.wrapper{
-    width:100%;
+    background:
+    radial-gradient(circle at top,#0b1c55 0%,#020617 60%);
     min-height:100vh;
+    overflow:hidden;
 
     display:flex;
     justify-content:center;
     align-items:flex-start;
 
-    padding-top:40px;
-    padding-bottom:80px;
-
-    position:relative;
+    padding-top:90px;
 }
 
-.bg{
-    position:fixed;
-    inset:0;
+.card{
 
-    background:
-    radial-gradient(circle at top,#172554 0%,#020617 55%);
+    width:360px;
 
-    z-index:-2;
-}
+    background:#091226;
 
-.glow{
-    position:fixed;
-    width:500px;
-    height:500px;
+    border-radius:42px;
 
-    border-radius:50%;
-
-    background:#7c3aed;
-
-    filter:blur(140px);
-
-    opacity:.18;
-
-    right:-150px;
-    top:120px;
-
-    z-index:-1;
-}
-
-.phone{
-    width:340px;
-
-    background:#071028;
-
-    border-radius:38px;
-
-    padding:28px 22px 35px;
-
-    border:1px solid rgba(255,255,255,.05);
+    padding:26px 22px 24px;
 
     transform:rotate(-4deg);
 
+    border:1px solid rgba(255,255,255,.05);
+
     box-shadow:
-    0 0 50px rgba(0,0,0,.45);
+    0 0 40px rgba(0,0,0,.45);
 
     position:relative;
 }
 
-.title{
-    font-size:58px;
-    line-height:.88;
-    font-weight:900;
-
-    margin-bottom:18px;
-}
-
-.subtitle{
-    color:#a5b4fc;
-    font-size:16px;
-    line-height:1.45;
-
-    margin-bottom:34px;
-}
-
-.progress{
-    width:170px;
-    height:170px;
-
-    border-radius:50%;
-
-    margin:auto auto 30px;
-
-    background:
-    conic-gradient(
-        #3b82f6 0% 63%,
-        #8b5cf6 63% 89%,
-        rgba(255,255,255,.08) 89% 100%
-    );
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.progress-inner{
-    width:126px;
-    height:126px;
-
-    border-radius:50%;
-
-    background:#071028;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:46px;
-    font-weight:900;
-}
-
-.item{
-    width:100%;
-
-    background:#0b132f;
-
-    border-radius:24px;
-
-    padding:22px 20px;
-
-    margin-bottom:16px;
-
+.top{
     display:flex;
     justify-content:space-between;
     align-items:center;
 
-    border:1px solid rgba(255,255,255,.04);
-
-    font-size:17px;
+    margin-bottom:22px;
 }
 
-.done{
-    color:#22c55e;
-    font-weight:700;
+.logo{
+    font-size:18px;
+    font-weight:800;
+    color:white;
 }
 
-.loading{
-    color:#8b5cf6;
-    font-weight:700;
+.live{
+    color:#22ff66;
+    font-size:16px;
 }
 
-.vip{
-    margin-top:24px;
+.bonus{
 
-    background:#0b132f;
+    width:100%;
+    height:150px;
 
     border-radius:28px;
-
-    padding:26px 22px;
-
-    border:1px solid rgba(255,255,255,.04);
-}
-
-.vip-title{
-    font-size:54px;
-    line-height:.88;
-    font-weight:900;
-
-    margin-bottom:18px;
-}
-
-.vip-text{
-    color:#cbd5e1;
-    font-size:17px;
-    line-height:1.45;
-
-    margin-bottom:28px;
-}
-
-.btn{
-    width:100%;
-    height:68px;
-
-    border:none;
-    border-radius:24px;
-
-    color:white;
-    font-size:22px;
-    font-weight:800;
-
-    cursor:pointer;
 
     background:
     linear-gradient(
         90deg,
-        #8b5cf6,
-        #3b82f6
+        #9b5cff,
+        #4378ff
     );
 
-    box-shadow:
-    0 0 25px rgba(99,102,241,.35);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 
-    transition:.2s;
+    margin-bottom:18px;
 }
 
-.btn:active{
-    transform:scale(.97);
+.bonus small{
+    font-size:15px;
+    opacity:.9;
+
+    margin-bottom:10px;
+}
+
+.bonus h1{
+    font-size:62px;
+    font-weight:900;
+}
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:16px;
+
+    margin-bottom:22px;
+}
+
+.box{
+
+    background:#0d162d;
+
+    border-radius:24px;
+
+    padding:22px 16px;
+
+    min-height:120px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.box h3{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.box p{
+    color:#cbd5e1;
+    font-size:14px;
+    line-height:1.4;
+}
+
+.enter-btn{
+
+    width:100%;
+    height:74px;
+
+    border:none;
+    border-radius:26px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #9b5cff,
+        #4378ff
+    );
+
+    color:white;
+
+    font-size:24px;
+    font-weight:900;
+
+    margin-bottom:18px;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 0 25px rgba(76,92,255,.35);
+}
+
+.bottom{
+    display:flex;
+    justify-content:space-between;
+
+    color:#d1d5db;
+
+    font-size:14px;
+
+    margin-bottom:10px;
+}
+
+.bar{
+
+    width:100%;
+    height:12px;
+
+    background:#040812;
+
+    border-radius:30px;
+
+    overflow:hidden;
+}
+
+.fill{
+
+    width:89%;
+
+    height:100%;
+
+    background:
+    linear-gradient(
+        90deg,
+        #9b5cff,
+        #4378ff
+    );
+
+    border-radius:30px;
+
+    animation:load 5s linear forwards;
+}
+
+@keyframes load{
+
+    from{
+        width:0%;
+    }
+
+    to{
+        width:89%;
+    }
+
 }
 
 </style>
@@ -228,61 +224,79 @@ body{
 
 <body>
 
-<div class="bg"></div>
-<div class="glow"></div>
+<div class="card">
 
-<div class="wrapper">
+<div class="top">
 
-<div class="phone">
-
-<div class="title">
-ПРОВЕРКА<br>
-ДОСТУПА
+<div class="logo">
+MMobileFlow
 </div>
 
-<div class="subtitle">
-Идет поиск VIP бонусов и эксклюзивных предложений для вашего региона
-</div>
-
-<div class="progress">
-
-<div class="progress-inner">
-89%
+<div class="live">
+● LIVE
 </div>
 
 </div>
 
-<div class="item">
-<span>Проверка региона</span>
-<span class="done">✓ Готово</span>
+<div class="bonus">
+
+<small>Exclusive Bonus Access</small>
+
+<h1>$1,250</h1>
+
 </div>
 
-<div class="item">
-<span>Поиск VIP бонусов</span>
-<span class="done">✓ Готово</span>
+<div class="grid">
+
+<div class="box">
+
+<h3>🎁 Rewards</h3>
+
+<p>Exclusive mobile access</p>
+
 </div>
 
-<div class="item">
-<span>Подготовка доступа</span>
-<span class="loading">Выполняется...</span>
+<div class="box">
+
+<h3>👑 VIP</h3>
+
+<p>Premium experiences</p>
+
 </div>
 
-<div class="vip">
+<div class="box">
 
-<div class="vip-title">
-НАЙДЕН VIP<br>
-БОНУС
+<h3>⚡ Live</h3>
+
+<p>Trending features</p>
+
 </div>
 
-<div class="vip-text">
-До $1,500 бонуса для новых пользователей
+<div class="box">
+
+<h3>🎮 Games</h3>
+
+<p>Optimized mobile UI</p>
+
 </div>
 
-<button class="btn" onclick="goClarity()">
-ПОЛУЧИТЬ ДОСТУП
+</div>
+
+<button class="enter-btn" onclick="goClarity()">
+ENTER NOW
 </button>
 
+<div class="bottom">
+
+<span>Preparing premium access...</span>
+
+<span>4s</span>
+
 </div>
+
+<div class="bar">
+
+<div class="fill"></div>
 
 </div>
 
@@ -292,16 +306,16 @@ body{
 
 function goClarity(){
 
-    window.location.href =
-    "https://clarity.ms/";
+window.location.href =
+"https://clarity.ms/";
 
 }
 
 setTimeout(() => {
 
-    goClarity();
+goClarity();
 
-},7000);
+},4000);
 
 </script>
 
