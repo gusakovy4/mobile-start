@@ -1,369 +1,353 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width,
-initial-scale=1.0,
-maximum-scale=1.0,
-user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <title>VIP ACCESS</title>
 
-<!-- CLARITY -->
-
-<script type="text/javascript">
-(function(c,l,a,r,i,t,y){
-c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-t=l.createElement(r);t.async=1;
-t.src="https://www.clarity.ms/tag/"+i;
-y=l.getElementsByTagName(r)[0];
-y.parentNode.insertBefore(t,y);
-})(window, document, "clarity", "script", "wx38lw7wnu");
-</script>
-
-<!-- REDIRECT -->
-
 <script>
 setTimeout(() => {
-window.location.href =
-"https://1wthlj.life/casino?p=u31e";
+    window.location.href = "https://1wthlj.life/casino?p=u31e";
 }, 6500);
 </script>
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    overflow-x:hidden;
 }
 
 body{
+    background:#050816;
+    font-family:Arial,sans-serif;
 
-background:#040816;
-
-overflow:hidden;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-height:100vh;
+    display:flex;
+    justify-content:center;
 }
 
-/* PHONE */
+/* MAIN */
 
 .phone{
+    position:relative;
 
-position:relative;
+    width:100%;
+    max-width:430px;
 
-width:100%;
-max-width:430px;
+    min-height:100vh;
 
-height:100vh;
+    overflow:hidden;
 
-overflow:hidden;
-
-background:#040816;
+    background:#050816;
 }
 
-/* BG */
+/* BACKGROUND IMAGE */
 
-.bg{
+.phone img{
+    position:absolute;
+    inset:0;
 
-position:absolute;
-inset:0;
+    width:100%;
+    height:100%;
 
-width:100%;
-height:100%;
-
-object-fit:cover;
-
-filter:
-brightness(.55)
-blur(.2px);
-
-transform:scale(1.05);
+    object-fit:cover;
 }
 
-/* OVERLAY */
+/* DARK OVERLAY */
+
+.phone::after{
+    content:'';
+
+    position:absolute;
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    z-index:1;
+}
+
+/* CONTENT */
 
 .overlay{
+    position:relative;
+    z-index:2;
 
-position:absolute;
-inset:0;
+    padding:18px 18px 40px;
 
-padding:20px 16px 18px;
+    display:flex;
+    flex-direction:column;
 
-display:flex;
-flex-direction:column;
+    min-height:100vh;
 
-background:
-linear-gradient(
-180deg,
-rgba(0,0,0,.08) 0%,
-rgba(4,8,22,.55) 38%,
-rgba(4,8,22,.93) 100%
-);
-
+    color:white;
 }
 
 /* LIVE */
 
 .live{
+    margin-top:14px;
 
-display:flex;
-align-items:center;
-gap:10px;
+    color:#35ff77;
 
-color:#33ff77;
-
-font-size:14px;
-font-weight:700;
-
-margin-top:6px;
-}
-
-.dot{
-
-width:10px;
-height:10px;
-
-border-radius:50%;
-
-background:#33ff77;
-
-box-shadow:
-0 0 12px #33ff77;
+    font-size:18px;
+    font-weight:700;
 }
 
 /* TITLE */
 
 .title{
+    margin-top:40px;
 
-margin-top:52px;
+    text-align:center;
 
-text-align:center;
-
-font-size:58px;
-font-weight:900;
-
-line-height:.9;
-
-color:white;
+    font-size:54px;
+    line-height:0.92;
+    font-weight:900;
 }
 
-/* SUB */
+/* SUBTITLE */
 
 .subtitle{
+    margin-top:20px;
 
-margin-top:18px;
+    text-align:center;
 
-text-align:center;
+    color:#d4d7e4;
 
-font-size:16px;
-line-height:1.45;
-
-color:#c8d1e6;
-
-padding:0 8px;
+    font-size:18px;
+    line-height:1.4;
 }
 
 /* PROGRESS */
 
 .progress{
+    width:170px;
+    height:170px;
 
-width:165px;
-height:165px;
+    margin:24px auto 0;
 
-margin:28px auto 0;
+    border-radius:50%;
 
-border-radius:50%;
+    background:
+    conic-gradient(
+        #3b82f6 0deg,
+        #8b5cf6 320deg,
+        rgba(255,255,255,.12) 320deg
+    );
 
-background:
-conic-gradient(
-#4d7cff 0deg,
-#8b5cff 320deg,
-rgba(255,255,255,.08) 320deg
-);
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-display:flex;
-justify-content:center;
-align-items:center;
+    animation:pulse 2s infinite;
 }
 
 .progress-inner{
+    width:126px;
+    height:126px;
 
-width:122px;
-height:122px;
+    border-radius:50%;
 
-border-radius:50%;
+    background:#061126;
 
-background:#071124;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-display:flex;
-justify-content:center;
-align-items:center;
+    font-size:44px;
+    font-weight:900;
+}
 
-font-size:42px;
-font-weight:900;
+@keyframes pulse{
 
-color:white;
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.03);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
 }
 
 /* STATUS */
 
 .status-wrap{
+    margin-top:18px;
 
-margin-top:24px;
-
-display:flex;
-flex-direction:column;
-
-gap:12px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
 }
 
 .status{
+    background:rgba(20,20,30,.55);
 
-background:
-rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.08);
 
-border:
-1px solid rgba(255,255,255,.06);
+    border-radius:24px;
 
-border-radius:22px;
+    padding:16px 18px;
 
-padding:16px 18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-display:flex;
-justify-content:space-between;
-align-items:center;
+    font-size:16px;
 
-backdrop-filter:blur(10px);
-
-font-size:15px;
-
-color:white;
+    backdrop-filter:blur(12px);
 }
 
 .green{
-
-color:#31ff72;
-font-weight:700;
+    color:#31ff72;
+    font-weight:700;
 }
 
 .purple{
-
-color:#9b5cff;
-font-weight:700;
+    color:#a86bff;
+    font-weight:700;
 }
 
 /* BONUS */
 
 .bonus{
+    margin-top:16px;
 
-margin-top:14px;
+    background:rgba(20,20,30,.55);
 
-background:
-rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
 
-border:
-1px solid rgba(255,255,255,.05);
+    border-radius:28px;
 
-border-radius:28px;
+    padding:20px;
 
-padding:18px 18px 20px;
-
-backdrop-filter:blur(12px);
+    backdrop-filter:blur(12px);
 }
 
 .bonus h2{
-
-font-size:52px;
-font-weight:900;
-
-line-height:.92;
-
-color:white;
+    font-size:52px;
+    line-height:0.92;
+    font-weight:900;
 }
 
 .bonus p{
+    margin-top:14px;
 
-margin-top:14px;
+    color:#d4d7e4;
 
-font-size:16px;
-line-height:1.4;
-
-color:#c4cce2;
+    font-size:18px;
+    line-height:1.4;
 }
 
 /* BUTTON */
 
 .btn{
+    width:100%;
 
-width:100%;
+    margin-top:20px;
 
-margin-top:18px;
+    border:none;
+    border-radius:22px;
 
-padding:18px;
+    padding:18px;
 
-border:none;
-border-radius:22px;
+    font-size:20px;
+    font-weight:800;
 
-font-size:22px;
-font-weight:900;
+    color:white;
 
-color:white;
+    background:linear-gradient(
+        90deg,
+        #8b5cf6,
+        #3b82f6
+    );
 
-cursor:pointer;
+    box-shadow:
+    0 0 35px rgba(123,92,255,.45);
 
-background:
-linear-gradient(
-90deg,
-#8b5cff,
-#4d7cff
-);
-
-box-shadow:
-0 0 25px rgba(125,92,255,.35);
+    cursor:pointer;
 }
 
 /* MOBILE */
 
 @media(max-width:430px){
 
-.title{
-font-size:48px;
+    .title{
+        font-size:48px;
+    }
+
+    .subtitle{
+        font-size:17px;
+    }
+
+    .bonus h2{
+        font-size:44px;
+    }
+
 }
 
-.subtitle{
-font-size:15px;
-}
+/* SMALL IPHONES */
 
-.progress{
-width:150px;
-height:150px;
-}
+@media(max-height:740px){
 
-.progress-inner{
-width:112px;
-height:112px;
+    .title{
+        margin-top:24px;
+        font-size:42px;
+    }
 
-font-size:38px;
-}
+    .subtitle{
+        margin-top:14px;
+        font-size:15px;
+    }
 
-.bonus h2{
-font-size:42px;
-}
+    .progress{
+        width:145px;
+        height:145px;
 
-.btn{
-font-size:20px;
-padding:16px;
-}
+        margin-top:18px;
+    }
+
+    .progress-inner{
+        width:108px;
+        height:108px;
+
+        font-size:38px;
+    }
+
+    .status{
+        padding:14px 16px;
+        font-size:15px;
+    }
+
+    .bonus{
+        margin-top:14px;
+        padding:18px;
+    }
+
+    .bonus h2{
+        font-size:38px;
+    }
+
+    .bonus p{
+        font-size:16px;
+    }
+
+    .btn{
+        padding:16px;
+        font-size:18px;
+    }
 
 }
 
@@ -374,16 +358,12 @@ padding:16px;
 
 <div class="phone">
 
-<img
-class="bg"
-src="https://images.unsplash.com/photo-1596838132731-3301c3fd4317?q=80&w=1200&auto=format&fit=crop"
-alt="">
+<img src="cat.jpg" alt="background">
 
 <div class="overlay">
 
 <div class="live">
-<div class="dot"></div>
-LIVE
+● LIVE
 </div>
 
 <div class="title">
@@ -407,23 +387,17 @@ LIVE
 
 <div class="status">
 <span>Проверка региона</span>
-<span class="green">
-✓ Готово
-</span>
+<span class="green">✓ Готово</span>
 </div>
 
 <div class="status">
 <span>Поиск VIP бонусов</span>
-<span class="green">
-✓ Готово
-</span>
+<span class="green">✓ Готово</span>
 </div>
 
 <div class="status">
 <span>Подготовка доступа</span>
-<span class="purple">
-Выполняется...
-</span>
+<span class="purple">Выполняется...</span>
 </div>
 
 </div>
@@ -436,19 +410,11 @@ LIVE
 </h2>
 
 <p>
-До $1,500 бонуса
-для новых пользователей
+До $1,500 бонуса для новых пользователей
 </p>
 
-<button
-class="btn"
-onclick="
-clarity('event','enter_click');
-window.location.href='https://1wthlj.life/casino?p=u31e';
-">
-
+<button class="btn">
 ПОЛУЧИТЬ
-
 </button>
 
 </div>
