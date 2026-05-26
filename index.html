@@ -1,344 +1,270 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MMobileFlow</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 
-<script type="text/javascript">
-(function(c,l,a,r,i,t,y){
-c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-})(window, document, "clarity", "script", "wx38lw7wnu");
-</script>
+<title>VIP ACCESS</title>
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-background:
-radial-gradient(circle at top right,#7c3aed55,transparent 30%),
-radial-gradient(circle at bottom left,#2563eb33,transparent 30%),
-#050816;
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-overflow:hidden;
-padding:10px;
+    background:#040816;
+    font-family:Arial,sans-serif;
+    overflow-x:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    min-height:100vh;
+    padding:20px;
 }
 
-.phone{
-width:390px;
-max-width:100%;
-background:#0f172a;
-border-radius:50px;
-padding:14px;
-border:1px solid rgba(255,255,255,0.08);
-box-shadow:0 30px 120px rgba(0,0,0,0.65);
-animation:float 4s ease-in-out infinite;
+/* PHONE */
+
+.phone-wrapper{
+    width:min(92vw,380px);
+    aspect-ratio:9/19.5;
+
+    position:relative;
+    margin:auto;
 }
 
-@keyframes float{
+/* BACKGROUND IMAGE */
 
-0%{
-transform:translateY(0px) rotate(-4deg);
+.phone-bg{
+    width:100%;
+    height:auto;
+    display:block;
+
+    border-radius:42px;
 }
 
-50%{
-transform:translateY(-15px) rotate(-2deg) scale(1.02);
+/* CONTENT */
+
+.phone-content{
+    position:absolute;
+    inset:0;
+
+    padding:24px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    color:white;
 }
 
-100%{
-transform:translateY(0px) rotate(-4deg);
-}
-
-}
-
-.screen{
-background:linear-gradient(180deg,#0b1120,#111827);
-border-radius:38px;
-padding:22px;
-overflow:hidden;
-}
-
-.top{
-display:flex;
-justify-content:space-between;
-align-items:center;
-margin-bottom:22px;
-}
-
-.logo{
-font-size:34px;
-font-weight:900;
-background:linear-gradient(to right,#8b5cf6,#2563eb);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-
-.live{
-display:flex;
-align-items:center;
-gap:8px;
-color:#22c55e;
-font-size:14px;
-font-weight:700;
-}
-
-.dot{
-width:10px;
-height:10px;
-background:#22c55e;
-border-radius:50%;
-box-shadow:0 0 12px #22c55e;
-}
-
-.users{
-background:#111827;
-border-radius:20px;
-padding:14px;
-display:flex;
-align-items:center;
-gap:12px;
-margin-bottom:24px;
-border:1px solid rgba(255,255,255,0.05);
-}
-
-.users-icon{
-font-size:26px;
-}
-
-.users-text{
-color:white;
-font-size:14px;
-}
-
-.users-text span{
-display:block;
-font-size:24px;
-font-weight:900;
-}
+/* TITLE */
 
 .title{
-text-align:center;
-font-size:42px;
-font-weight:900;
-color:white;
-line-height:1.1;
-margin-bottom:12px;
+    margin-top:40px;
+
+    text-align:center;
+
+    font-size:42px;
+    font-weight:800;
+    line-height:1.1;
 }
+
+/* SUBTITLE */
 
 .subtitle{
-text-align:center;
-font-size:16px;
-color:#94a3b8;
-line-height:1.5;
-margin-bottom:28px;
+    margin-top:18px;
+
+    text-align:center;
+
+    color:#b4bdd3;
+
+    font-size:18px;
+    line-height:1.5;
 }
 
-.loader-wrap{
-display:flex;
-justify-content:center;
-align-items:center;
-margin-bottom:28px;
+/* PROGRESS */
+
+.progress-wrap{
+    margin-top:34px;
+
+    width:180px;
+    height:180px;
+
+    border-radius:50%;
+
+    background:
+    conic-gradient(
+        #3b82f6 0deg,
+        #8b5cf6 320deg,
+        rgba(255,255,255,0.08) 320deg
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-.loader{
-width:210px;
-height:210px;
-border-radius:50%;
-border:12px solid rgba(255,255,255,0.06);
-border-top:12px solid #8b5cf6;
-border-right:12px solid #2563eb;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:52px;
-font-weight:900;
-color:white;
-animation:spin 2s linear infinite;
+.progress-inner{
+    width:135px;
+    height:135px;
+
+    border-radius:50%;
+
+    background:#071127;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:46px;
+    font-weight:800;
 }
 
-@keyframes spin{
+/* STATUS CARDS */
 
-0%{
-transform:rotate(0deg);
+.status-list{
+    width:100%;
+    margin-top:28px;
+
+    display:flex;
+    flex-direction:column;
+    gap:14px;
 }
 
-100%{
-transform:rotate(360deg);
+.status-item{
+    background:rgba(255,255,255,0.04);
+
+    border:1px solid rgba(255,255,255,0.06);
+
+    border-radius:24px;
+
+    padding:18px 20px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    backdrop-filter:blur(12px);
 }
 
+.status-text{
+    font-size:18px;
+    color:white;
 }
 
-.steps{
-display:flex;
-flex-direction:column;
-gap:14px;
-margin-bottom:26px;
+.status-ready{
+    color:#2dff72;
+    font-weight:700;
 }
 
-.step{
-background:#111827;
-padding:16px;
-border-radius:18px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-border:1px solid rgba(255,255,255,0.05);
-color:white;
-font-size:15px;
+.status-loading{
+    color:#8b5cf6;
+    font-weight:700;
 }
 
-.ok{
-color:#22c55e;
-font-weight:700;
-}
+/* BONUS CARD */
 
-.wait{
-color:#8b5cf6;
-font-weight:700;
-animation:pulse 1s infinite;
-}
+.bonus-card{
+    width:100%;
 
-@keyframes pulse{
+    margin-top:22px;
 
-0%{
-opacity:0.5;
-}
+    background:rgba(255,255,255,0.04);
 
-50%{
-opacity:1;
-}
+    border:1px solid rgba(255,255,255,0.06);
 
-100%{
-opacity:0.5;
-}
+    border-radius:30px;
 
-}
+    padding:24px;
 
-.bonus{
-background:#111827;
-border-radius:24px;
-padding:22px;
-border:1px solid rgba(255,255,255,0.06);
+    backdrop-filter:blur(14px);
 }
 
 .bonus-title{
-font-size:28px;
-font-weight:900;
-color:white;
-margin-bottom:10px;
+    font-size:42px;
+    line-height:1.1;
+    font-weight:900;
 }
 
 .bonus-sub{
-color:#94a3b8;
-font-size:16px;
-margin-bottom:20px;
-line-height:1.5;
+    margin-top:14px;
+
+    color:#b4bdd3;
+
+    font-size:20px;
+    line-height:1.4;
 }
 
-.btn{
-display:block;
-width:100%;
-padding:22px;
-border-radius:22px;
-text-align:center;
-text-decoration:none;
-background:linear-gradient(to right,#8b5cf6,#2563eb);
-color:white;
-font-size:24px;
-font-weight:900;
-box-shadow:0 0 30px rgba(99,102,241,0.6);
-animation:btnpulse 1.5s infinite;
-margin-bottom:18px;
+/* BUTTON */
+
+.claim-btn{
+    width:100%;
+
+    margin-top:24px;
+
+    border:none;
+    border-radius:24px;
+
+    padding:22px;
+
+    font-size:22px;
+    font-weight:800;
+
+    color:white;
+
+    background:linear-gradient(
+        90deg,
+        #8b5cf6,
+        #3b82f6
+    );
+
+    cursor:pointer;
 }
 
-@keyframes btnpulse{
+/* MOBILE */
 
-0%{
-transform:scale(1);
-}
+@media(max-width:480px){
 
-50%{
-transform:scale(1.03);
-}
+    .phone-wrapper{
+        width:95vw;
+    }
 
-100%{
-transform:scale(1);
-}
+    .title{
+        font-size:34px;
+    }
 
-}
+    .subtitle{
+        font-size:16px;
+    }
 
-.secure{
-text-align:center;
-font-size:14px;
-color:#94a3b8;
-margin-bottom:22px;
-}
+    .progress-wrap{
+        width:150px;
+        height:150px;
+    }
 
-.progress-top{
-display:flex;
-justify-content:space-between;
-color:white;
-font-size:14px;
-margin-bottom:10px;
-}
+    .progress-inner{
+        width:112px;
+        height:112px;
+        font-size:38px;
+    }
 
-.progress{
-height:10px;
-background:#0b1120;
-border-radius:20px;
-overflow:hidden;
-}
+    .bonus-title{
+        font-size:34px;
+    }
 
-.progress-fill{
-height:100%;
-width:0%;
-background:linear-gradient(to right,#8b5cf6,#2563eb);
-animation:loading 8s linear forwards;
-}
+    .bonus-sub{
+        font-size:17px;
+    }
 
-@keyframes loading{
-
-0%{
-width:0%;
-}
-
-100%{
-width:100%;
-}
-
-}
-
-@media(max-width:600px){
-
-.phone{
-width:350px;
-}
-
-.title{
-font-size:34px;
-}
-
-.loader{
-width:180px;
-height:180px;
-font-size:44px;
-}
-
-.btn{
-font-size:22px;
-}
-
+    .claim-btn{
+        font-size:18px;
+        padding:18px;
+    }
 }
 
 </style>
@@ -346,130 +272,80 @@ font-size:22px;
 
 <body>
 
-<div class="phone">
+<div class="phone-wrapper">
 
-<div class="screen">
+<img class="phone-bg" src="cat.jpg" alt="bg">
 
-<div class="top">
-
-<div class="logo">
-M
-</div>
-
-<div class="live">
-<div class="dot"></div>
-LIVE
-</div>
-
-</div>
-
-<div class="users">
-
-<div class="users-icon">
-👥
-</div>
-
-<div class="users-text">
-<span>18 356</span>
-активных пользователей
-</div>
-
-</div>
+<div class="phone-content">
 
 <div class="title">
-ПРОВЕРКА<br>ДОСТУПА
+ПРОВЕРКА<br>
+ДОСТУПА
 </div>
 
 <div class="subtitle">
 Идет поиск VIP бонусов и эксклюзивных предложений для вашего региона
 </div>
 
-<div class="loader-wrap">
-
-<div class="loader" id="percent">
-68%
+<div class="progress-wrap">
+    <div class="progress-inner">
+        89%
+    </div>
 </div>
 
-</div>
+<div class="status-list">
 
-<div class="steps">
+    <div class="status-item">
+        <div class="status-text">
+            Проверка региона
+        </div>
 
-<div class="step">
-<span>Проверка региона</span>
-<span class="ok">✓ Готово</span>
-</div>
+        <div class="status-ready">
+            ✓ Готово
+        </div>
+    </div>
 
-<div class="step">
-<span>Поиск VIP бонусов</span>
-<span class="ok">✓ Готово</span>
-</div>
+    <div class="status-item">
+        <div class="status-text">
+            Поиск VIP бонусов
+        </div>
 
-<div class="step">
-<span>Подготовка доступа</span>
-<span class="wait">Выполняется...</span>
-</div>
+        <div class="status-ready">
+            ✓ Готово
+        </div>
+    </div>
 
-</div>
+    <div class="status-item">
+        <div class="status-text">
+            Подготовка доступа
+        </div>
 
-<div class="bonus">
-
-<div class="bonus-title">
-НАЙДЕН VIP БОНУС
-</div>
-
-<div class="bonus-sub">
-До $1,500 бонуса для новых пользователей
-</div>
-
-<a href="https://w-one909485.life/v3/aggressive-casino?p=s5gp"
-class="btn"
-onclick="clarity('event', 'enter_click')">
-ПОЛУЧИТЬ ДОСТУП
-</a>
-
-<div class="secure">
-🔒 Безопасное подключение
-</div>
-
-<div class="progress-top">
-<span>Автоматический переход</span>
-<span id="timer">8 сек</span>
-</div>
-
-<div class="progress">
-<div class="progress-fill"></div>
-</div>
+        <div class="status-loading">
+            Выполняется...
+        </div>
+    </div>
 
 </div>
 
-</div>
+<div class="bonus-card">
+
+    <div class="bonus-title">
+        НАЙДЕН VIP<br>
+        БОНУС
+    </div>
+
+    <div class="bonus-sub">
+        До $1,500 бонуса для новых пользователей
+    </div>
+
+    <button class="claim-btn">
+        ПОЛУЧИТЬ
+    </button>
 
 </div>
 
-<script>
-
-let sec = 8;
-
-const timer = document.getElementById('timer');
-
-const interval = setInterval(() => {
-
-sec--;
-
-timer.innerHTML = sec + ' сек';
-
-if(sec <= 0){
-
-clearInterval(interval);
-
-window.location.href = "https://w-one909485.life/v3/aggressive-casino?p=s5gp";
-
-}
-
-},1000);
-
-</script>
+</div>
+</div>
 
 </body>
 </html>
-
