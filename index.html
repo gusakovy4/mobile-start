@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>VIP Access</title>
+<title>Chile VIP</title>
 
 <!-- CLARITY -->
 <script type="text/javascript">
@@ -26,126 +26,112 @@
 
 body{
     background:
-    radial-gradient(circle at top,#2b1468 0%,#060018 55%,#02000d 100%);
-    color:#fff;
+    radial-gradient(circle at top,#1f0d4f 0%,#070019 60%,#02000d 100%);
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     overflow:hidden;
+    color:white;
 }
 
 .wrapper{
     width:100%;
     max-width:430px;
-    margin:auto;
-    min-height:100vh;
     padding:18px;
+}
+
+.card{
+    background:#0b1024;
+    border-radius:38px;
+    padding:28px 22px;
+    border:1px solid rgba(255,255,255,.05);
+    box-shadow:
+    0 0 40px rgba(0,0,0,.4),
+    inset 0 0 40px rgba(255,255,255,.02);
+
+    transform:rotate(-4deg);
+}
+
+.top{
     display:flex;
-    flex-direction:column;
-    justify-content:center;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:22px;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:800;
 }
 
 .live{
-    color:#70ff6f;
+    color:#43ff6a;
     font-size:16px;
     font-weight:700;
-    margin-bottom:14px;
 }
 
 .live::before{
     content:"● ";
 }
 
-.title{
-    font-size:52px;
-    font-weight:900;
-    line-height:0.92;
-    text-transform:uppercase;
-    margin-bottom:14px;
-}
-
-.subtitle{
-    color:#d7d7d7;
-    font-size:17px;
-    line-height:1.35;
-    margin-bottom:20px;
-}
-
-.circle-wrap{
-    display:flex;
-    justify-content:center;
-    margin-bottom:20px;
-}
-
-.circle{
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    background:
-    conic-gradient(
-        #5f7cff 0deg,
-        #5f7cff 280deg,
-        #9c5cff 320deg,
-        #1a1d35 360deg
-    );
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    box-shadow:0 0 25px rgba(92,110,255,.4);
-}
-
-.circle-inner{
-    width:125px;
-    height:125px;
-    border-radius:50%;
-    background:#030726;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:50px;
-    font-weight:900;
-}
-
-.step{
-    background:rgba(18,18,30,.88);
-    border-radius:24px;
-    padding:18px 20px;
-    margin-bottom:12px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    font-size:18px;
-    border:1px solid rgba(255,255,255,.05);
-}
-
-.done{
-    color:#67ff67;
-    font-weight:700;
-}
-
-.loading{
-    color:#af6cff;
-    font-weight:700;
-}
-
-.card{
-    margin-top:8px;
-    background:rgba(18,18,30,.92);
-    border-radius:28px;
-    padding:22px;
-    border:1px solid rgba(255,255,255,.05);
-}
-
-.card-title{
-    font-size:44px;
-    font-weight:900;
-    line-height:0.95;
-    margin-bottom:16px;
-    text-transform:uppercase;
-}
-
-.card-text{
-    color:#d5d5d5;
-    font-size:20px;
-    line-height:1.35;
+.bonus-box{
+    width:100%;
+    background:linear-gradient(90deg,#b05cff,#4f7dff);
+    border-radius:26px;
+    padding:24px 20px;
+    text-align:center;
     margin-bottom:22px;
+    box-shadow:0 0 30px rgba(103,92,255,.35);
+}
+
+.bonus-top{
+    font-size:18px;
+    opacity:.9;
+    margin-bottom:12px;
+}
+
+.bonus-money{
+    font-size:58px;
+    font-weight:900;
+    line-height:1;
+    margin-bottom:10px;
+}
+
+.bonus-sub{
+    font-size:18px;
+    font-weight:700;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+    margin-bottom:24px;
+}
+
+.item{
+    background:#10162d;
+    border-radius:24px;
+    padding:22px 16px;
+    text-align:center;
+}
+
+.item-icon{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.item-title{
+    font-size:18px;
+    font-weight:700;
+    margin-bottom:8px;
+}
+
+.item-text{
+    font-size:15px;
+    color:#cfcfcf;
+    line-height:1.35;
 }
 
 .btn{
@@ -153,39 +139,53 @@ body{
     border:none;
     border-radius:24px;
     padding:22px;
-    font-size:26px;
-    font-weight:900;
+    background:linear-gradient(90deg,#b05cff,#4f7dff);
     color:white;
+    font-size:34px;
+    font-weight:900;
     cursor:pointer;
-    background:linear-gradient(90deg,#b05cff,#5f7cff);
-    box-shadow:0 0 25px rgba(120,90,255,.45);
-}
-
-.progress-box{
-    margin-top:18px;
+    margin-bottom:18px;
+    box-shadow:0 0 25px rgba(108,92,255,.4);
 }
 
 .progress-top{
     display:flex;
     justify-content:space-between;
-    color:#d5d5d5;
-    font-size:15px;
+    font-size:16px;
+    color:#d7d7d7;
     margin-bottom:8px;
 }
 
 .progress{
     width:100%;
     height:10px;
-    background:#171727;
-    border-radius:20px;
+    background:#050814;
+    border-radius:30px;
     overflow:hidden;
 }
 
 .progress-fill{
-    width:89%;
+    width:78%;
     height:100%;
-    border-radius:20px;
-    background:linear-gradient(90deg,#a95cff,#5f7cff);
+    background:linear-gradient(90deg,#b05cff,#4f7dff);
+    border-radius:30px;
+}
+
+@media(max-width:430px){
+
+.card{
+    padding:24px 18px;
+}
+
+.bonus-money{
+    font-size:48px;
+}
+
+.btn{
+    font-size:28px;
+    padding:20px;
+}
+
 }
 
 </style>
@@ -195,66 +195,76 @@ body{
 
 <div class="wrapper">
 
-<div class="live">LIVE</div>
-
-<div class="title">
-VERIFICACIÓN<br>
-DE ACCESO
-</div>
-
-<div class="subtitle">
-Buscando bonos VIP exclusivos<br>
-para tu región
-</div>
-
-<div class="circle-wrap">
-<div class="circle">
-<div class="circle-inner">89%</div>
-</div>
-</div>
-
-<div class="step">
-<span>Verificación de región</span>
-<span class="done">✓ Listo</span>
-</div>
-
-<div class="step">
-<span>Búsqueda de bonos VIP</span>
-<span class="done">✓ Listo</span>
-</div>
-
-<div class="step">
-<span>Preparando acceso</span>
-<span class="loading">En proceso...</span>
-</div>
-
 <div class="card">
 
-<div class="card-title">
-BONO VIP<br>
-ENCONTRADO
+<div class="top">
+<div class="logo">MMobileFlow</div>
+<div class="live">LIVE</div>
 </div>
 
-<div class="card-text">
-Hasta 5.000.000 CLP<br>
-+ 250 giros gratis
+<div class="bonus-box">
+
+<div class="bonus-top">
+Acceso Exclusivo VIP
+</div>
+
+<div class="bonus-money">
+5.000.000
+</div>
+
+<div class="bonus-sub">
+CLP + 250 Giros Gratis
+</div>
+
+</div>
+
+<div class="grid">
+
+<div class="item">
+<div class="item-icon">🎁</div>
+<div class="item-title">Bonos</div>
+<div class="item-text">
+Acceso exclusivo móvil
+</div>
+</div>
+
+<div class="item">
+<div class="item-icon">👑</div>
+<div class="item-title">VIP</div>
+<div class="item-text">
+Experiencia premium
+</div>
+</div>
+
+<div class="item">
+<div class="item-icon">⚡</div>
+<div class="item-title">En Vivo</div>
+<div class="item-text">
+Funciones exclusivas
+</div>
+</div>
+
+<div class="item">
+<div class="item-icon">🎮</div>
+<div class="item-title">Casino</div>
+<div class="item-text">
+Juegos optimizados móvil
+</div>
+</div>
+
 </div>
 
 <button class="btn" onclick="goOffer()">
-OBTENER ACCESO
+ENTRAR AHORA
 </button>
-
-<div class="progress-box">
 
 <div class="progress-top">
 <span>Preparando acceso premium...</span>
-<span>89%</span>
+<span>4s</span>
 </div>
 
 <div class="progress">
 <div class="progress-fill"></div>
-</div>
-
 </div>
 
 </div>
@@ -266,7 +276,7 @@ OBTENER ACCESO
 function goOffer(){
 
     if(window.clarity){
-        clarity("set","offer_click","chile_offer");
+        clarity("set","offer_click","chile_vip");
     }
 
     setTimeout(function(){
