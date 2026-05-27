@@ -1,24 +1,21 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="es">
 <head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Acceso VIP</title>
 
-<title>VIP ACCESS</title>
-
-<!-- MICROSOFT CLARITY -->
-
+<!-- Microsoft Clarity -->
 <script type="text/javascript">
 (function(c,l,a,r,i,t,y){
-c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-})(window, document, "clarity", "script", "wx38lw7wnu");
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "YOUR_CLARITY_ID");
 </script>
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -27,333 +24,291 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 }
 
 body{
-    background:#000;
-    overflow-x:hidden;
-    color:#fff;
-}
-
-/* MAIN */
-
-.phone{
-    position:relative;
-    width:100%;
-    min-height:100vh;
-    overflow:hidden;
-
     background:
-    radial-gradient(circle at top,
-    rgba(124,58,237,.35),
-    transparent 35%),
-
-    linear-gradient(
-    180deg,
-    #050816 0%,
-    #020617 40%,
-    #000000 100%);
+    radial-gradient(circle at top,#2b1468 0%,#060018 55%,#02000d 100%);
+    color:white;
+    min-height:100vh;
+    overflow-x:hidden;
 }
 
-/* CONTENT */
-
-.overlay{
-    position:relative;
-    z-index:2;
-
+.container{
     width:100%;
     max-width:430px;
-
-    margin:auto;
-
-    padding:14px 16px 24px;
+    margin:0 auto;
+    padding:20px;
+    padding-top:40px;
 }
-
-/* LIVE */
 
 .live{
-    color:#31ff63;
-    font-size:16px;
+    color:#73ff73;
+    font-size:18px;
     font-weight:700;
-
-    margin-bottom:16px;
-}
-
-.live::before{
-    content:'●';
-    margin-right:8px;
-}
-
-/* TITLE */
-
-h1{
-    font-size:42px;
-    line-height:.92;
-    font-weight:900;
-
     margin-bottom:18px;
 }
 
-/* SUBTITLE */
-
-.subtitle{
-    font-size:16px;
-    line-height:1.45;
-    color:#d7dbe7;
-
-    margin-bottom:14px;
+.live::before{
+    content:"● ";
 }
 
-/* PROGRESS */
+.title{
+    font-size:64px;
+    font-weight:900;
+    line-height:0.95;
+    margin-bottom:24px;
+    text-transform:uppercase;
+}
 
-.progress-wrap{
+.subtitle{
+    font-size:19px;
+    color:#d7d7d7;
+    line-height:1.4;
+    margin-bottom:34px;
+}
+
+.circle-wrap{
     display:flex;
     justify-content:center;
-
-    margin-bottom:20px;
+    margin-bottom:34px;
 }
 
 .circle{
-    width:120px;
-    height:120px;
-
+    width:250px;
+    height:250px;
     border-radius:50%;
-
     background:
     conic-gradient(
-        #4b7cff 0% 63%,
-        #9d5cff 63% 89%,
-        rgba(255,255,255,.12) 89% 100%
+        #5d7cff 0deg,
+        #5d7cff 250deg,
+        #9b5cff 310deg,
+        #1a1d35 360deg
     );
-
     display:flex;
     align-items:center;
     justify-content:center;
-
-    box-shadow:
-    0 0 30px rgba(76,92,255,.25);
-
-    animation:pulse 2s infinite;
+    box-shadow:0 0 35px rgba(93,124,255,.35);
 }
 
 .circle-inner{
-    width:82px;
-    height:82px;
-
+    width:165px;
+    height:165px;
     border-radius:50%;
-
-    background:#020b2d;
-
+    background:#040726;
     display:flex;
     align-items:center;
     justify-content:center;
-
-    font-size:34px;
+    font-size:68px;
     font-weight:900;
 }
 
-/* STATUS */
-
-.status-box{
-    padding:12px 14px;
-
-    margin-bottom:12px;
-
-    border-radius:22px;
-
-    background:rgba(12,12,25,.58);
-
-    backdrop-filter:blur(18px);
-
-    border:1px solid rgba(255,255,255,.04);
-
+.step{
+    background:rgba(18,18,30,.88);
+    border:1px solid rgba(255,255,255,.05);
+    border-radius:28px;
+    padding:24px 26px;
+    margin-bottom:18px;
     display:flex;
     justify-content:space-between;
     align-items:center;
-
-    font-size:15px;
+    backdrop-filter:blur(12px);
+    font-size:21px;
 }
 
 .done{
-    color:#35ff5c;
+    color:#62ff67;
     font-weight:700;
 }
 
 .loading{
-    color:#a855f7;
+    color:#ab6cff;
     font-weight:700;
 }
 
-/* BONUS */
-
-.bonus{
-    margin-top:16px;
-
-    background:rgba(12,12,25,.58);
-
-    border-radius:24px;
-
-    padding:18px 18px;
-
-    backdrop-filter:blur(18px);
-
-    border:1px solid rgba(255,255,255,.04);
+.bonus-card{
+    margin-top:18px;
+    background:rgba(18,18,30,.92);
+    border-radius:30px;
+    padding:30px 24px;
+    border:1px solid rgba(255,255,255,.05);
 }
 
-.bonus h2{
-    font-size:38px;
-    line-height:.92;
+.bonus-title{
+    font-size:58px;
     font-weight:900;
-
-    margin-bottom:14px;
+    line-height:0.95;
+    margin-bottom:22px;
+    text-transform:uppercase;
 }
 
-.bonus p{
-    font-size:15px;
-    line-height:1.45;
-
-    color:#d7dbe7;
-
-    margin-bottom:18px;
+.bonus-text{
+    font-size:22px;
+    color:#d9d9d9;
+    line-height:1.4;
+    margin-bottom:30px;
 }
 
-/* BUTTON */
-
-.clarity-btn{
+.btn{
     width:100%;
-    height:58px;
-
     border:none;
-    border-radius:22px;
-
-    font-size:18px;
-    font-weight:800;
-
-    color:#fff;
-
+    border-radius:28px;
+    padding:26px;
+    font-size:32px;
+    font-weight:900;
+    color:white;
     cursor:pointer;
-
-    background:
-    linear-gradient(
-        90deg,
-        #b44cff,
-        #4b7cff
-    );
-
-    box-shadow:
-    0 0 25px rgba(76,92,255,.35);
-
+    background:linear-gradient(90deg,#b05cff,#5f7cff);
+    box-shadow:0 0 35px rgba(120,90,255,.45);
     transition:.2s;
 }
 
-.clarity-btn:active{
+.btn:active{
     transform:scale(.98);
 }
 
-/* ANIMATION */
-
-@keyframes pulse{
-
-    0%{
-        transform:scale(1);
-    }
-
-    50%{
-        transform:scale(1.03);
-    }
-
-    100%{
-        transform:scale(1);
-    }
-
+.progress-box{
+    margin-top:28px;
 }
 
+.progress-text{
+    display:flex;
+    justify-content:space-between;
+    font-size:18px;
+    color:#d6d6d6;
+    margin-bottom:10px;
+}
+
+.progress{
+    width:100%;
+    height:12px;
+    border-radius:30px;
+    background:#171727;
+    overflow:hidden;
+}
+
+.progress-fill{
+    width:89%;
+    height:100%;
+    border-radius:30px;
+    background:linear-gradient(90deg,#a95cff,#5f7cff);
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%{opacity:.7;}
+    50%{opacity:1;}
+    100%{opacity:.7;}
+}
+
+@media(max-width:430px){
+
+.title{
+    font-size:56px;
+}
+
+.circle{
+    width:220px;
+    height:220px;
+}
+
+.circle-inner{
+    width:145px;
+    height:145px;
+    font-size:58px;
+}
+
+.bonus-title{
+    font-size:48px;
+}
+
+.btn{
+    font-size:28px;
+    padding:22px;
+}
+
+}
 </style>
 </head>
 
 <body>
 
-<div class="phone">
+<div class="container">
 
-<div class="overlay">
+<div class="live">LIVE</div>
 
-<div class="live">
-LIVE
+<div class="title">
+VERIFICACIÓN<br>
+DE ACCESO
 </div>
-
-<h1>
-ПРОВЕРКА<br>
-ДОСТУПА
-</h1>
 
 <div class="subtitle">
-Идет поиск VIP бонусов и эксклюзивных предложений для вашего региона
+Buscando bonos VIP exclusivos<br>
+para tu región
 </div>
 
-<div class="progress-wrap">
-
+<div class="circle-wrap">
 <div class="circle">
-
-<div class="circle-inner">
-89%
+<div class="circle-inner">89%</div>
+</div>
 </div>
 
+<div class="step">
+<span>Verificación de región</span>
+<span class="done">✓ Listo</span>
 </div>
 
+<div class="step">
+<span>Búsqueda de bonos VIP</span>
+<span class="done">✓ Listo</span>
 </div>
 
-<div class="status-box">
-<span>Проверка региона</span>
-<span class="done">✓ Готово</span>
+<div class="step">
+<span>Preparando acceso</span>
+<span class="loading">En proceso...</span>
 </div>
 
-<div class="status-box">
-<span>Поиск VIP бонусов</span>
-<span class="done">✓ Готово</span>
+<div class="bonus-card">
+
+<div class="bonus-title">
+BONO VIP<br>
+ENCONTRADO
 </div>
 
-<div class="status-box">
-<span>Подготовка доступа</span>
-<span class="loading">Выполняется...</span>
+<div class="bonus-text">
+Hasta 5.000.000 CLP<br>
++ 250 giros gratis
 </div>
 
-<div class="bonus">
-
-<h2>
-НАЙДЕН VIP<br>
-БОНУС
-</h2>
-
-<p>
-До $1,500 бонуса для новых пользователей
-</p>
-
-<button class="clarity-btn" onclick="goOffer()">
-ПОЛУЧИТЬ ДОСТУП
+<button class="btn" onclick="goOffer()">
+OBTENER ACCESO
 </button>
 
+<div class="progress-box">
+
+<div class="progress-text">
+<span>Preparando acceso premium...</span>
+<span>89%</span>
+</div>
+
+<div class="progress">
+<div class="progress-fill"></div>
 </div>
 
 </div>
-
+</div>
 </div>
 
 <script>
-
 function goOffer(){
 
-    clarity("event", "offer_click");
+    if(window.clarity){
+        clarity("set","offer_click","chile_offer");
+    }
 
-    window.location.href =
-    "https://w-one909485.life/v3/aggressive-casino?p=s5gp";
+    setTimeout(function(){
+        window.location.href =
+        "https://w-one36399.com/v3/3371/landing-football-interactive?p=um8y";
+    },300);
 
 }
-
-/* AUTO REDIRECT */
-
-setTimeout(() => {
-
-    goOffer();
-
-}, 7000);
-
 </script>
 
 </body>
