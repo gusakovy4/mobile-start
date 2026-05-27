@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>Acceso VIP</title>
+<title>VIP Access</title>
 
-<!-- Microsoft Clarity -->
+<!-- CLARITY -->
 <script type="text/javascript">
 (function(c,l,a,r,i,t,y){
     c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -16,6 +16,7 @@
 </script>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -26,24 +27,26 @@
 body{
     background:
     radial-gradient(circle at top,#2b1468 0%,#060018 55%,#02000d 100%);
-    color:white;
-    min-height:100vh;
-    overflow-x:hidden;
+    color:#fff;
+    overflow:hidden;
 }
 
-.container{
+.wrapper{
     width:100%;
     max-width:430px;
-    margin:0 auto;
-    padding:20px;
-    padding-top:40px;
+    margin:auto;
+    min-height:100vh;
+    padding:18px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 }
 
 .live{
-    color:#73ff73;
-    font-size:18px;
+    color:#70ff6f;
+    font-size:16px;
     font-weight:700;
-    margin-bottom:18px;
+    margin-bottom:14px;
 }
 
 .live::before{
@@ -51,186 +54,146 @@ body{
 }
 
 .title{
-    font-size:64px;
+    font-size:52px;
     font-weight:900;
-    line-height:0.95;
-    margin-bottom:24px;
+    line-height:0.92;
     text-transform:uppercase;
+    margin-bottom:14px;
 }
 
 .subtitle{
-    font-size:19px;
     color:#d7d7d7;
-    line-height:1.4;
-    margin-bottom:34px;
+    font-size:17px;
+    line-height:1.35;
+    margin-bottom:20px;
 }
 
 .circle-wrap{
     display:flex;
     justify-content:center;
-    margin-bottom:34px;
+    margin-bottom:20px;
 }
 
 .circle{
-    width:250px;
-    height:250px;
+    width:180px;
+    height:180px;
     border-radius:50%;
     background:
     conic-gradient(
-        #5d7cff 0deg,
-        #5d7cff 250deg,
-        #9b5cff 310deg,
+        #5f7cff 0deg,
+        #5f7cff 280deg,
+        #9c5cff 320deg,
         #1a1d35 360deg
     );
     display:flex;
     align-items:center;
     justify-content:center;
-    box-shadow:0 0 35px rgba(93,124,255,.35);
+    box-shadow:0 0 25px rgba(92,110,255,.4);
 }
 
 .circle-inner{
-    width:165px;
-    height:165px;
+    width:125px;
+    height:125px;
     border-radius:50%;
-    background:#040726;
+    background:#030726;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:68px;
+    font-size:50px;
     font-weight:900;
 }
 
 .step{
     background:rgba(18,18,30,.88);
-    border:1px solid rgba(255,255,255,.05);
-    border-radius:28px;
-    padding:24px 26px;
-    margin-bottom:18px;
+    border-radius:24px;
+    padding:18px 20px;
+    margin-bottom:12px;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    backdrop-filter:blur(12px);
-    font-size:21px;
+    font-size:18px;
+    border:1px solid rgba(255,255,255,.05);
 }
 
 .done{
-    color:#62ff67;
+    color:#67ff67;
     font-weight:700;
 }
 
 .loading{
-    color:#ab6cff;
+    color:#af6cff;
     font-weight:700;
 }
 
-.bonus-card{
-    margin-top:18px;
+.card{
+    margin-top:8px;
     background:rgba(18,18,30,.92);
-    border-radius:30px;
-    padding:30px 24px;
+    border-radius:28px;
+    padding:22px;
     border:1px solid rgba(255,255,255,.05);
 }
 
-.bonus-title{
-    font-size:58px;
+.card-title{
+    font-size:44px;
     font-weight:900;
     line-height:0.95;
-    margin-bottom:22px;
+    margin-bottom:16px;
     text-transform:uppercase;
 }
 
-.bonus-text{
-    font-size:22px;
-    color:#d9d9d9;
-    line-height:1.4;
-    margin-bottom:30px;
+.card-text{
+    color:#d5d5d5;
+    font-size:20px;
+    line-height:1.35;
+    margin-bottom:22px;
 }
 
 .btn{
     width:100%;
     border:none;
-    border-radius:28px;
-    padding:26px;
-    font-size:32px;
+    border-radius:24px;
+    padding:22px;
+    font-size:26px;
     font-weight:900;
     color:white;
     cursor:pointer;
     background:linear-gradient(90deg,#b05cff,#5f7cff);
-    box-shadow:0 0 35px rgba(120,90,255,.45);
-    transition:.2s;
-}
-
-.btn:active{
-    transform:scale(.98);
+    box-shadow:0 0 25px rgba(120,90,255,.45);
 }
 
 .progress-box{
-    margin-top:28px;
+    margin-top:18px;
 }
 
-.progress-text{
+.progress-top{
     display:flex;
     justify-content:space-between;
-    font-size:18px;
-    color:#d6d6d6;
-    margin-bottom:10px;
+    color:#d5d5d5;
+    font-size:15px;
+    margin-bottom:8px;
 }
 
 .progress{
     width:100%;
-    height:12px;
-    border-radius:30px;
+    height:10px;
     background:#171727;
+    border-radius:20px;
     overflow:hidden;
 }
 
 .progress-fill{
     width:89%;
     height:100%;
-    border-radius:30px;
+    border-radius:20px;
     background:linear-gradient(90deg,#a95cff,#5f7cff);
-    animation:pulse 2s infinite;
 }
 
-@keyframes pulse{
-    0%{opacity:.7;}
-    50%{opacity:1;}
-    100%{opacity:.7;}
-}
-
-@media(max-width:430px){
-
-.title{
-    font-size:56px;
-}
-
-.circle{
-    width:220px;
-    height:220px;
-}
-
-.circle-inner{
-    width:145px;
-    height:145px;
-    font-size:58px;
-}
-
-.bonus-title{
-    font-size:48px;
-}
-
-.btn{
-    font-size:28px;
-    padding:22px;
-}
-
-}
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="wrapper">
 
 <div class="live">LIVE</div>
 
@@ -265,14 +228,14 @@ para tu región
 <span class="loading">En proceso...</span>
 </div>
 
-<div class="bonus-card">
+<div class="card">
 
-<div class="bonus-title">
+<div class="card-title">
 BONO VIP<br>
 ENCONTRADO
 </div>
 
-<div class="bonus-text">
+<div class="card-text">
 Hasta 5.000.000 CLP<br>
 + 250 giros gratis
 </div>
@@ -283,7 +246,7 @@ OBTENER ACCESO
 
 <div class="progress-box">
 
-<div class="progress-text">
+<div class="progress-top">
 <span>Preparando acceso premium...</span>
 <span>89%</span>
 </div>
@@ -293,10 +256,13 @@ OBTENER ACCESO
 </div>
 
 </div>
+
 </div>
+
 </div>
 
 <script>
+
 function goOffer(){
 
     if(window.clarity){
@@ -304,11 +270,14 @@ function goOffer(){
     }
 
     setTimeout(function(){
+
         window.location.href =
         "https://w-one36399.com/v3/3371/landing-football-interactive?p=um8y";
+
     },300);
 
 }
+
 </script>
 
 </body>
