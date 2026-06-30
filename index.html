@@ -1,428 +1,92 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-<title>Chile VIP Access</title>
-
-<!-- MICROSOFT CLARITY -->
-<script type="text/javascript">
-(function(c,l,a,r,i,t,y){
-    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-    t=l.createElement(r);
-    t.async=1;
-    t.src="https://www.clarity.ms/tag/"+i;
-    y=l.getElementsByTagName(r)[0];
-    y.parentNode.insertBefore(t,y);
-})(window, document, "clarity", "script", "wx38lw7wnu");
-</script>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MobileFlow | Mobile Technology</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
-}
-
-body{
-    background:
-    radial-gradient(circle at top,#1f0d4f 0%,#070019 60%,#02000d 100%);
-    
-    min-height:100vh;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    overflow:hidden;
-
-    color:white;
-}
-
-/* WRAPPER */
-
-.wrapper{
-    width:100%;
-    max-width:430px;
-
-    padding:12px;
-}
-
-/* CARD */
-
-.card{
-    background:#0b1024;
-
-    border-radius:34px;
-
-    padding:20px 16px;
-
-    border:1px solid rgba(255,255,255,.05);
-
-    box-shadow:
-    0 0 40px rgba(0,0,0,.45),
-    inset 0 0 30px rgba(255,255,255,.02);
-
-    transform:rotate(-4deg);
-}
-
-/* TOP */
-
-.top{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    margin-bottom:16px;
-}
-
-.logo{
-    font-size:19px;
-    font-weight:800;
-}
-
-.live{
-    color:#4dff72;
-
-    font-size:15px;
-    font-weight:700;
-}
-
-.live::before{
-    content:"● ";
-}
-
-/* BONUS */
-
-.bonus-box{
-    width:100%;
-
-    background:
-    linear-gradient(
-    90deg,
-    #b05cff,
-    #4f7dff);
-
-    border-radius:22px;
-
-    padding:16px 14px;
-
-    text-align:center;
-
-    margin-bottom:16px;
-
-    box-shadow:
-    0 0 24px rgba(103,92,255,.35);
-}
-
-.bonus-top{
-    font-size:15px;
-    opacity:.95;
-
-    margin-bottom:8px;
-}
-
-.bonus-money{
-    font-size:42px;
-    font-weight:900;
-
-    line-height:1;
-
-    margin-bottom:8px;
-}
-
-.bonus-sub{
-    font-size:15px;
-    font-weight:700;
-}
-
-/* GRID */
-
-.grid{
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:10px;
-
-    margin-bottom:16px;
-}
-
-.item{
-    background:#10162d;
-
-    border-radius:20px;
-
-    padding:14px 10px;
-
-    text-align:center;
-}
-
-.item-icon{
-    font-size:24px;
-
-    margin-bottom:6px;
-}
-
-.item-title{
-    font-size:15px;
-    font-weight:700;
-
-    margin-bottom:4px;
-}
-
-.item-text{
-    font-size:12px;
-
-    color:#cfcfcf;
-
-    line-height:1.3;
-}
-
-/* BUTTON */
-
-.btn{
-    width:100%;
-
-    border:none;
-
-    border-radius:20px;
-
-    padding:16px;
-
-    background:
-    linear-gradient(
-    90deg,
-    #b05cff,
-    #4f7dff);
-
-    color:white;
-
-    font-size:24px;
-    font-weight:900;
-
-    cursor:pointer;
-
-    margin-bottom:14px;
-
-    box-shadow:
-    0 0 20px rgba(108,92,255,.45);
-
-    transition:.2s;
-}
-
-.btn:active{
-    transform:scale(.98);
-}
-
-/* PROGRESS */
-
-.progress-top{
-    display:flex;
-    justify-content:space-between;
-
-    font-size:13px;
-
-    color:#d7d7d7;
-
-    margin-bottom:6px;
-}
-
-.progress{
-    width:100%;
-
-    height:8px;
-
-    background:#050814;
-
-    border-radius:30px;
-
-    overflow:hidden;
-}
-
-.progress-fill{
-    width:78%;
-    height:100%;
-
-    background:
-    linear-gradient(
-    90deg,
-    #b05cff,
-    #4f7dff);
-
-    border-radius:30px;
-
-    animation:loading 4s linear infinite;
-}
-
-@keyframes loading{
-
-    0%{
-        width:0%;
-    }
-
-    100%{
-        width:100%;
-    }
-
-}
-
-/* MOBILE */
-
-@media(max-width:430px){
-
-.card{
-    transform:none;
-}
-
-}
-
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,sans-serif;background:#0f172a;color:#fff;line-height:1.6}
+header{padding:80px 20px;text-align:center;background:linear-gradient(135deg,#2563eb,#0f172a)}
+h1{font-size:56px}
+p.lead{max-width:700px;margin:20px auto;font-size:20px;color:#dbeafe}
+.btn{display:inline-block;padding:14px 28px;background:#2563eb;color:#fff;text-decoration:none;border-radius:8px;font-weight:600}
+section{max-width:1100px;margin:auto;padding:70px 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.card{background:#1e293b;padding:25px;border-radius:12px;transition:.3s}
+.card:hover{transform:translateY(-6px)}
+h2{text-align:center;margin-bottom:35px}
+footer{padding:35px;text-align:center;background:#020617;color:#94a3b8}
 </style>
 </head>
-
 <body>
 
-<div class="wrapper">
+<header>
+<h1>MobileFlow</h1>
+<p class="lead">
+Independent resource about smartphones, mobile apps, privacy,
+performance, and digital productivity.
+</p>
+<a class="btn" href="#about">Learn More</a>
+</header>
 
-<div class="card">
+<section id="about">
+<h2>About MobileFlow</h2>
+<p style="text-align:center;max-width:800px;margin:auto">
+MobileFlow publishes practical guides, tips, and educational articles
+that help users get more from Android and iPhone devices. Our mission
+is to make mobile technology simple and accessible.
+</p>
+</section>
 
-<div class="top">
-
-<div class="logo">
-MMobileFlow
-</div>
-
-<div class="live">
-LIVE
-</div>
-
-</div>
-
-<div class="bonus-box">
-
-<div class="bonus-top">
-Acceso Exclusivo VIP
-</div>
-
-<div class="bonus-money">
-5.000.000
-</div>
-
-<div class="bonus-sub">
-CLP + 250 Giros Gratis
-</div>
-
-</div>
-
+<section>
+<h2>Topics</h2>
 <div class="grid">
-
-<div class="item">
-<div class="item-icon">🎁</div>
-
-<div class="item-title">
-Bonos
+<div class="card">
+<h3>📱 Smartphone Tips</h3>
+<p>Setup guides, hidden features and useful tricks.</p>
 </div>
-
-<div class="item-text">
-Acceso exclusivo móvil
+<div class="card">
+<h3>🔒 Privacy</h3>
+<p>Security recommendations and safe online habits.</p>
 </div>
+<div class="card">
+<h3>⚡ Performance</h3>
+<p>Battery life, storage cleanup and speed improvements.</p>
 </div>
-
-<div class="item">
-<div class="item-icon">👑</div>
-
-<div class="item-title">
-VIP
-</div>
-
-<div class="item-text">
-Experiencia premium
+<div class="card">
+<h3>☁ Cloud</h3>
+<p>Backup, synchronization and cloud services.</p>
 </div>
 </div>
+</section>
 
-<div class="item">
-<div class="item-icon">⚡</div>
-
-<div class="item-title">
-En Vivo
+<section>
+<h2>Latest Articles</h2>
+<div class="grid">
+<div class="card"><h3>10 Ways to Improve Battery Life</h3></div>
+<div class="card"><h3>How to Keep Your Smartphone Secure</h3></div>
+<div class="card"><h3>Best Productivity Apps</h3></div>
+<div class="card"><h3>Android vs iPhone</h3></div>
 </div>
+</section>
 
-<div class="item-text">
-Funciones exclusivas
+<section>
+<h2>FAQ</h2>
+<div class="card">
+<h3>Is MobileFlow free?</h3>
+<p>Yes. All educational content is freely available.</p>
+<br>
+<h3>Do you collect personal information?</h3>
+<p>No. Only anonymous analytics may be used to improve the website.</p>
 </div>
-</div>
+</section>
 
-<div class="item">
-<div class="item-icon">🎮</div>
-
-<div class="item-title">
-Juegos
-</div>
-
-<div class="item-text">
-Optimizado para móvil
-</div>
-</div>
-
-</div>
-
-<button class="btn" onclick="goOffer()">
-ENTRAR
-</button>
-
-<div class="progress-top">
-
-<span>
-Preparando acceso premium...
-</span>
-
-<span>
-4s
-</span>
-
-</div>
-
-<div class="progress">
-
-<div class="progress-fill"></div>
-
-</div>
-
-</div>
-
-</div>
-
-<script>
-
-function goOffer(){
-
-    if(window.clarity){
-
-        clarity("set","offer_click","chile_vip");
-
-    }
-
-    setTimeout(function(){
-
-        window.location.href =
-        "https://w-one36399.com/v3/3371/landing-football-interactive?p=um8y";
-
-    },300);
-
-}
-
-/* AUTO REDIRECT */
-
-setTimeout(function(){
-
-    goOffer();
-
-},4000);
-
-</script>
+<footer>
+<p>© 2026 MobileFlow. All rights reserved.</p>
+<p>Privacy Policy • Terms of Use • Contact</p>
+</footer>
 
 </body>
 </html>
